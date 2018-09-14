@@ -9,6 +9,7 @@ import org.springframework.context.annotation.ComponentScan;
 public class ElsevierProjectApplication {
 
 	public static void main(String[] args) {
+		// a random comment
 		SpringApplication.run(ElsevierProjectApplication.class, args);
 	}
 }
