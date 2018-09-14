@@ -13,7 +13,11 @@ public class ElsevierProjectApplication {
 		//a nother random comment
 		//testing
 		//Laura testing
+<<<<<<< HEAD
 		//change in sts :D mon
+=======
+		//Laura testing from Kraken
+>>>>>>> master
 		SpringApplication.run(ElsevierProjectApplication.class, args);
 
 	}
