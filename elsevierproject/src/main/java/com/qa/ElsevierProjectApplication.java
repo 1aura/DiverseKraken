@@ -13,5 +13,7 @@ public class ElsevierProjectApplication {
 		//a nother random comment
 		//testing
 		SpringApplication.run(ElsevierProjectApplication.class, args);
+
+		System.out.println("We are merged! :D");
 	}
 }
