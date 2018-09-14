@@ -13,6 +13,7 @@ public class ElsevierProjectApplication {
 		//a nother random comment
 		//testing
 		//Laura testing
+		//Laura testing from Kraken
 		SpringApplication.run(ElsevierProjectApplication.class, args);
 
 		System.out.println("We are merged! :D");
