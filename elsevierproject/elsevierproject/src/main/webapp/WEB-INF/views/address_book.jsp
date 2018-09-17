@@ -134,7 +134,15 @@
        
   <!--   </div> -->
     
-    
+      <!-- Footer -->
+  <footer class="w3-row-padding w3-padding-32">
+    <div class="w3-third">
+      <h3><img src="images/DiverseBooks.jpg" width="100" height="100"/> Diverse Books </h3>
+	<p>This website is proudly brought to you by Team Diversity. &copy; 2018 Team Diversity</p>
+    </div>
+  
+   
+  </footer>
          
        
     </div>
