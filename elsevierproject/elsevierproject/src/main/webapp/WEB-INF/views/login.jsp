@@ -78,7 +78,7 @@
       
       <div class="halves last">
            <h3> New Customer?</h3>
-           <p> Please register to create a new account</p>
+           <label> Please register to create a new account</label>
            <a href="/register" class="button expanded">Register</a>
          
             </div>
