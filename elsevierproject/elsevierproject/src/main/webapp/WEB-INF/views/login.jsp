@@ -11,7 +11,7 @@
    <!-- Just an image -->
 
 <div class="header">
-  <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg"/></a>
+  <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg" width=120 height=100 /></a>
   </div>
     <!-- Start Top Bar -->
     <div class="navbar">

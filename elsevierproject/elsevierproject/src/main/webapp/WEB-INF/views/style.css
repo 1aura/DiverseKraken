@@ -1884,6 +1884,9 @@ select[multiple] {
 .flex-video.vimeo {
     padding-top: 0;
 }
+.header {
+	image-align: centre;
+}
 .label {
     display: inline-block;
     padding: .33333rem .5rem;
@@ -1910,6 +1913,9 @@ select[multiple] {
 .label.warning {
     background: #ffae00;
     color: #fefefe;
+}
+.logo {
+	 text-align: center;
 }
 .media-object {
     margin-bottom: 1rem;
