@@ -1853,6 +1853,12 @@ select[multiple] {
     left: auto;
     right: 0;
 }
+.header  {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    height: 20%
+}
 .is-dropdown-menu.vertical {
     width: 100px;
 }
@@ -2814,6 +2820,7 @@ table.hover tr:nth-of-type(even):hover {
     transform: translateY(-50%);
 }
 .top-bar {
+	position: fixed;
     padding: .5rem;
 }
 .top-bar::after, .top-bar::before {
@@ -2830,8 +2837,10 @@ table.hover tr:nth-of-type(even):hover {
 @media screen and (min-width:40em) {
     .top-bar-left {
     float: left;
+    position: fixed;
 }
 .top-bar-right {
     float: right;
+    position: fixed;
 }
 }
