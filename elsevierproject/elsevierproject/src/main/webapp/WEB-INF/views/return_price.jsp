@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-<title>Insert title here</title>
+<title>Price</title>
 </head>
 <body>
 
@@ -13,5 +13,12 @@ double calculatedPrice = (Double) request.getAttribute("total_price");
 out.println(calculatedPrice);
 System.out.println("Called");
 %>
+
+      <!-- Footer -->
+  <div class="footer">
+<h3><img src="images/DiverseBooks.jpg" width="100" height="100"/> Diverse Books </h3>
+	<p>This website is proudly brought to you by Team Diversity. &copy; 2018 Team Diversity</p>
+</div>
+
 </body>
 </html>

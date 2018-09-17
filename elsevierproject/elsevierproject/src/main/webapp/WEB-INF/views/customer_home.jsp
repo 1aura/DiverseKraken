@@ -29,13 +29,8 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:red"></li>
-          <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
-      
-</ul>
+          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
+          <li><a href="#">Home</a></li>
           
       </div>
       
@@ -71,14 +66,10 @@
     </script>
     
       <!-- Footer -->
-  <footer class="w3-row-padding w3-padding-32">
-    <div class="w3-third">
-      <h3><img src="images/DiverseBooks.jpg" width="100" height="100"/> Diverse Books </h3>
+  <div class="footer">
+<h3><img src="images/DiverseBooks.jpg" width="100" height="100"/> Diverse Books </h3>
 	<p>This website is proudly brought to you by Team Diversity. &copy; 2018 Team Diversity</p>
-    </div>
-  
-   
-  </footer>
+</div>
     
   </body>
 </html>
