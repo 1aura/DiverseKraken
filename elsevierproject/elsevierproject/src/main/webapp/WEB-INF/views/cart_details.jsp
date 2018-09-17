@@ -88,7 +88,7 @@
       <% 
      
       
-      /* for(Book book : books)
+      for(Book book : books)
       {
     	  
     	  int quantity = bookCounts.get(book.getBookId());
@@ -97,7 +97,7 @@
     	  cartTotal = cartTotal + book.getPrice()*quantity;
     	  System.out.println("Cart Total "+cartTotal);
     	  
-      } */
+      }
       
       
       int i = 0;
