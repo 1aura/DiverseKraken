@@ -2,7 +2,7 @@
 <%@page import="java.util.Iterator"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
-<%@page import="com.qa.models.Book"%>
+<%@page import="com.elsevier.models.Book"%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />

@@ -1,5 +1,5 @@
 <!doctype html>
-<%@page import="com.qa.models.Book"%>
+<%@page import="com.elsevier.models.Book"%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />

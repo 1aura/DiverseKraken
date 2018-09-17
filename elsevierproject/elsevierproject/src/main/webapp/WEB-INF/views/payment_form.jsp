@@ -3,7 +3,7 @@
 <%@page import="java.util.Set"%>
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
-<%@page import="com.qa.models.Book"%>
+<%@page import="com.elsevier.models.Book"%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />

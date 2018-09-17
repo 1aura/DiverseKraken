@@ -1,4 +1,4 @@
-package com.qa.models;
+package com.elsevier.models;
 
 
 

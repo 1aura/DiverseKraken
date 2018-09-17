@@ -1,10 +1,10 @@
-package com.qa.services;
+package com.elsevier.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.qa.models.Book;
-import com.qa.repositories.BookRepository;
+import com.elsevier.models.Book;
+import com.elsevier.repositories.BookRepository;
 
 @Service
 public class BookService {

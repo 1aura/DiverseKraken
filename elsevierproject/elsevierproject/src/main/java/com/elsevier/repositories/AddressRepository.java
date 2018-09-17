@@ -1,4 +1,4 @@
-package com.qa.repositories;
+package com.elsevier.repositories;
 
 import javax.transaction.Transactional;
 
@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;
 
-import com.qa.models.Address;
+import com.elsevier.models.Address;
 
 public interface AddressRepository extends CrudRepository<Address,Integer>
 {

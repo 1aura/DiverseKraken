@@ -1,4 +1,4 @@
-package com.qa.restful.controllers;
+package com.elsevier.restful.controllers;
 
 import java.util.ArrayList;
 
@@ -14,10 +14,10 @@ import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.qa.models.Book;
-import com.qa.models.Customer;
-import com.qa.services.BookService;
-import com.qa.services.CustomerService;
+import com.elsevier.models.Book;
+import com.elsevier.models.Customer;
+import com.elsevier.services.BookService;
+import com.elsevier.services.CustomerService;
 
 @RestController
 @SessionAttributes(names={"books","cart_items","logged_in_customer","Address"})

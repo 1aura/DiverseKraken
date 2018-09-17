@@ -1,4 +1,4 @@
-package com.qa.repositories;
+package com.elsevier.repositories;
 
 import javax.transaction.Transactional;
 
@@ -9,7 +9,8 @@ import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
 
 
-import com.qa.models.Customer;
+
+import com.elsevier.models.Customer;
 
 @Repository
 public interface CustomerRepository extends CrudRepository<Customer, Integer>{

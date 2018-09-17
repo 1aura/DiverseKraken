@@ -1,11 +1,11 @@
-package com.qa.services;
+package com.elsevier.services;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Service;
 
-import com.qa.models.Customer;
-import com.qa.repositories.CustomerRepository;
+import com.elsevier.models.Customer;
+import com.elsevier.repositories.CustomerRepository;
 
 @Service
 public class CustomerService {

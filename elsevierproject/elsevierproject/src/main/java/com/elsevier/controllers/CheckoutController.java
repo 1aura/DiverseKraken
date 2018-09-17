@@ -1,4 +1,4 @@
-package com.qa.controllers;
+package com.elsevier.controllers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
@@ -11,7 +11,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
-import com.qa.models.Shipping;
+import com.elsevier.models.Shipping;
 
 @SessionAttributes(names={"book_counts"})
 @Controller
