@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping </title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    .halves {
+	width:49%;
+	float:left;
+	margin-right:2%;
+	}
+	.last {
+	margin-right:0;
+	}
+    </style>
   </head>
   <body>
     
@@ -48,10 +58,11 @@
 
     <div class="callout large">
       <div class="row column">
+      
+	      
         
-        
-        <div class="split left">
-        <div class="centered">
+        <section>
+        <div class="halves">
            <h3> Login  </h3>
                 
                <form action="loginProcess" method="post"> 
@@ -64,16 +75,14 @@
               
               </form>
             </div>
-            </div>
       
-      <div class="split right">
-      <div class="centered">
-           
-           <p> New Customer?  </p> <a href="/register" class="button large expanded">Register</a>
+      <div class="halves last">
+           <h3> New Customer?</h3>
+           <label> Please register to create a new account</label>
+           <a href="/register" class="button expanded">Register</a>
          
             </div>
-            </div>
-      
+      </section>
        
       </div>
     </div>

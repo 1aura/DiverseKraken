@@ -5,6 +5,14 @@
 body, button, legend {
     padding: 0;
 }
+.halves {
+	width:49%;
+	float:left;
+	margin-right:2%;
+}
+.last {
+	margin-right:0;
+}
 .row.collapse>.column, .row.collapse>.columns, .row.small-collapse>.column, .row.small-collapse>.columns {
     padding-left: 0;
     padding-right: 0;
