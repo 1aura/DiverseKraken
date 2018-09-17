@@ -17,6 +17,7 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
+<<<<<<< Updated upstream
           <li class="menu-text" style="color:red"></li>
           <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
@@ -24,6 +25,10 @@
           <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
       
 </ul>
+=======
+          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/></li>
+          <li><a href="#">Home</a></li>
+>>>>>>> Stashed changes
           
       </div>
       

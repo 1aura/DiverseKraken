@@ -283,13 +283,13 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+    font-family: "Helvetica Neue", Georgia,  Roboto, Arial, sans-serif;
     font-weight: 400
 }
 
 body,
 html {
-    font-size: 100%;
+    font-size: 110%;
     box-sizing: border-box
 }
 
@@ -307,6 +307,18 @@ body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale
 }
+
+
+.footer {
+    position: static;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: light grey;
+    color: black;
+    text-align: center;
+}
+
 
 select {
     width: 100%
@@ -2641,7 +2653,7 @@ screen and (min-width:75em) {
     position: absolute;
     width: 300px;
     z-index: 10;
-    border-radius: 0
+    border-radius: 10px;
 }
 
 .dropdown-pane.is-open {
@@ -2662,12 +2674,14 @@ screen and (min-width:75em) {
 
 .dropdown.menu .has-submenu {
     position: relative
+    
 }
 
 .dropdown.menu .has-submenu a::after {
     float: right;
     margin-top: 3px;
     margin-left: 10px
+  
 }
 
 .dropdown.menu .has-submenu.is-down-arrow a {
@@ -2738,7 +2752,8 @@ screen and (min-width:75em) {
     min-width: 200px;
     z-index: 1;
     background: #fefefe;
-    border: 1px solid #cacaca
+    border: 1px solid #cacaca;
+    
 }
 
 .dropdown.menu .submenu>li {
@@ -2768,7 +2783,8 @@ screen and (min-width:75em) {
 }
 
 .is-dropdown-menu.vertical {
-    width: 100px
+    width: 100px;
+    
 }
 
 .is-dropdown-menu.vertical>li .submenu {
@@ -4009,7 +4025,8 @@ table.hover tr:nth-of-type(even):hover {
     right: 100%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
-    transform: translateY(-50%)
+    transform: translateY(-50%);
+    
 }
 
 .navbar {
