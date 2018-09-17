@@ -6,13 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Foundation | Welcome</title>
     <link rel="stylesheet" href="css/style.css">
-    
-    
-    
-    
-    
-  </head>
-  <body>
+</head>
+
+<body>
     
     <%!
     
@@ -112,8 +108,9 @@
 
         <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button large expanded">Add to Cart</a>
 
+
          <div class="small secondary expanded button-group">
-            <a class="button">Facebook</a>
+           <a class="button">Facebook</a>
             <a class="button">Twitter</a>
             <a class="button">Yo</a>
           </div> 
