@@ -1235,7 +1235,7 @@ button {
 .pagination::after,
 .tabs::after,
 .title-bar::after,
-.top-bar::after,
+.navbar::after,
 hr {
     clear: both
 }
@@ -4012,30 +4012,30 @@ table.hover tr:nth-of-type(even):hover {
     transform: translateY(-50%)
 }
 
-.top-bar {
+.navbar {
     padding: .5rem
 }
 
-.top-bar::after,
-.top-bar::before {
+.navbar::after,
+.navbar::before {
     content: ' ';
     display: table
 }
 
-.top-bar,
-.top-bar ul {
+.navbar,
+.navbar ul {
     background-color: #eee
 }
 
-.top-bar input {
+.navbar input {
     width: 200px;
     margin-right: 1rem
 }
 @media screen and (min-width:40em) {
-    .top-bar-left {
+    .navbar-left {
         float: left
     }
-    .top-bar-right {
+    .navbar-right {
         float: right
     }
 }

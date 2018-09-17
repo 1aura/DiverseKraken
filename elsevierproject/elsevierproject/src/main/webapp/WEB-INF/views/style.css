@@ -5,6 +5,14 @@
 body, button, legend {
     padding: 0;
 }
+.halves {
+	width:49%;
+	float:left;
+	margin-right:2%;
+}
+.last {
+	margin-right:0;
+}
 .row.collapse>.column, .row.collapse>.columns, .row.small-collapse>.column, .row.small-collapse>.columns {
     padding-left: 0;
     padding-right: 0;
@@ -1853,6 +1861,12 @@ select[multiple] {
     left: auto;
     right: 0;
 }
+.header  {
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%;
+    height: 20%;
+}
 .is-dropdown-menu.vertical {
     width: 100px;
 }
@@ -2813,25 +2827,32 @@ table.hover tr:nth-of-type(even):hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.top-bar {
-    padding: .5rem;
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
-.top-bar::after, .top-bar::before {
+
+.navbar::after, .navbar::before {
     content: ' ';
     display: table;
 }
-.top-bar, .top-bar ul {
+.navbar, .navbar ul {
     background-color: #eee;
 }
-.top-bar input {
+.navbar input {
     width: 200px;
     margin-right: 1rem;
 }
 @media screen and (min-width:40em) {
-    .top-bar-left {
+    .navbar-left {
     float: left;
+    position: fixed;
 }
-.top-bar-right {
+.navbar-right {
     float: right;
+    position: fixed;
 }
 }

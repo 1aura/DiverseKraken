@@ -5,26 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping </title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    .halves {
+	width:49%;
+	float:left;
+	margin-right:2%;
+	}
+	.last {
+	margin-right:0;
+	}
+    </style>
   </head>
   <body>
     
+   <!-- Just an image -->
+
+<div class="header">
+  <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg"/></a>
+  </div>
     <!-- Start Top Bar -->
-    <div class="top-bar">
-      <div class="top-bar-left">
+    <div class="navbar">
+      <div class="navbar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:red">Online Shopping</li>
-          <li><a href="#">Home</a></li>
+          <li class="menu-text" style="color:red"></li>
+          <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
+          <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
+          <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
+          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
+      
+</ul>
           
-        </ul>
       </div>
-      <div class="top-bar-right">
+      
+      <div class="nav-bar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
-            <li id="cart_items"></li>
+            
             <li class="has-submenu">
-              <a href="/viewCart"> <img src="images/cart.jpg" width="50" height="50"/></a>
+              <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/> View Cart </a></li>
+                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
                 <li><a href="/login">Register | Login</a></li>
               </ul>
             </li>
@@ -38,10 +58,11 @@
 
     <div class="callout large">
       <div class="row column">
+      
+	      
         
-        
-        <div class="split left">
-        <div class="centered">
+        <section>
+        <div class="halves">
            <h3> Login  </h3>
                 
                <form action="loginProcess" method="post"> 
@@ -54,16 +75,14 @@
               
               </form>
             </div>
-            </div>
       
-      <div class="split right">
-      <div class="centered">
-           
-           <p> New Customer?  </p> <a href="/register" class="button large expanded">Register</a>
+      <div class="halves last">
+           <h3> New Customer?</h3>
+           <label> Please register to create a new account</label>
+           <a href="/register" class="button expanded">Register</a>
          
             </div>
-            </div>
-      
+      </section>
        
       </div>
     </div>
