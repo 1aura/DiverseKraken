@@ -11,22 +11,31 @@
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
+  <!-- Just an image -->
 
+<div class="header">
+  <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg"/></a>
+  </div>
     <!-- Start Top Bar -->
     <div class="top-bar">
       <div class="top-bar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:blue">Online Shopping</li>
+          <li class="menu-text" style="color:red"></li>
           <li><a href="#">Home</a></li>
+          <li><a href="book_details.jsp">Bestsellers</a></li>
+          <li><a href="book_details.jsp">New In</a></li>
+          <li><a href="book_details.jsp">All Books</a></li>
+      
+</ul>
           
-        </ul>
       </div>
+      
       <div class="top-bar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             
             <li class="has-submenu">
-              <a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a>
+              <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
                 <li><a href="/login">Register | Login</a></li>
@@ -43,7 +52,7 @@
 
     
     <div class="row column text-center">
-      <h2>Our Newest Books
+      <h2>
       
       
       <%
