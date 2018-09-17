@@ -40,8 +40,9 @@
       <div class="row column">
         
         
-        <div class="medium-6">
-           <h3> Please login using your stored credentials  </h3>
+        <div class="split left">
+        <div class="centered">
+           <h3> Login  </h3>
                 
                <form action="loginProcess" method="post"> 
               
@@ -49,15 +50,18 @@
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
                 <label>Password * </label>
 				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
-            	<input type="submit" class="button expanded" value="Login">
+            	<input type="submit" class="button expanded" value="Submit">
               
               </form>
             </div>
+            </div>
       
-      <div class="medium-6">
+      <div class="split right">
+      <div class="centered">
            
            <p> New Customer?  </p> <a href="/register" class="button large expanded">Register</a>
          
+            </div>
             </div>
       
        
