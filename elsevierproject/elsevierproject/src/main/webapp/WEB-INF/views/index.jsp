@@ -17,8 +17,8 @@
   <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg"/></a>
   </div>
     <!-- Start Top Bar -->
-    <div class="top-bar">
-      <div class="top-bar-left">
+    <div class="navbar">
+      <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red"></li>
           <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
@@ -30,7 +30,7 @@
           
       </div>
       
-      <div class="top-bar-right">
+      <div class="nav-bar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             

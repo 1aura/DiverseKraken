@@ -2819,27 +2819,31 @@ table.hover tr:nth-of-type(even):hover {
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
 }
-.top-bar {
-	position: fixed;
-    padding: .5rem;
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+    position: fixed; /* Set the navbar to fixed position */
+    top: 0; /* Position the navbar at the top of the page */
+    width: 100%; /* Full width */
 }
-.top-bar::after, .top-bar::before {
+
+.navbar::after, .navbar::before {
     content: ' ';
     display: table;
 }
-.top-bar, .top-bar ul {
+.navbar, .navbar ul {
     background-color: #eee;
 }
-.top-bar input {
+.navbar input {
     width: 200px;
     margin-right: 1rem;
 }
 @media screen and (min-width:40em) {
-    .top-bar-left {
+    .navbar-left {
     float: left;
     position: fixed;
 }
-.top-bar-right {
+.navbar-right {
     float: right;
     position: fixed;
 }
