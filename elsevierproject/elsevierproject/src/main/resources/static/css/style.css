@@ -1385,6 +1385,11 @@ a img {
     border: 0
 }
 
+.header {
+	margin-left:25%;
+
+}
+
 hr {
     box-sizing: content-box;
     max-width: 75rem;
@@ -4056,5 +4061,10 @@ table.hover tr:nth-of-type(even):hover {
     .navbar-right {
         float: right
     }
+
 }
+.img {
+	margin-right: auto;
+}
+
 

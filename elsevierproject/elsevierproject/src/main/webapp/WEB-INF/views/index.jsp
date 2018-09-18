@@ -15,7 +15,7 @@
 
 <div class="header">
   <a href="#default" >
-  <img  class="header" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
+  <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
   </a>
   </div>
     <!-- Start Top Bar -->
