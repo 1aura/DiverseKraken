@@ -109,21 +109,18 @@
       %>
       
          			
-        <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:225px;height:350px;"/>
+        
         <div class="row small-up-4">
         <p>
-        <div class="column" ><%= book.getTitle()%></div>
+        <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:113px;height:175px;"/>
+        
         </p>
 
           <p>
-           <div class="column">
-          Price of One: £<%=book.getPrice()%>
-           <div class="row small-up-4">
-        
-        
-        
-        </div> 
-           </div>
+           
+          <div class="column" style="width:200px"><%= book.getTitle()%></div>
+           
+
           </p>
           <p>
            <div class="column">
@@ -140,7 +137,7 @@
             </form>
             
             <div class="special"><a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a></div> 
-            
+          
            
           </div>
           

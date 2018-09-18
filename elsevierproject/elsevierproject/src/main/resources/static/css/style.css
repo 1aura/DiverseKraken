@@ -4068,6 +4068,13 @@ table.hover tr:nth-of-type(even):hover {
 }
 
 .special{
-	display: block
+	background-color: #87CEFA;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
 	
 }
