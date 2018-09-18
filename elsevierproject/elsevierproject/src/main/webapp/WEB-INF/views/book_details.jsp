@@ -108,15 +108,25 @@
         <h3><%=book.getTitle() %></h3>
         <p><%=book.getDescription() %></p>
 
-        <label>Select the format
+        <label>Select Quantity
         <select>
           <option value="">-- Select -- </option>
-          <option value="print">Paperback</option>
-          <option value="eBook">eBook</option>
-          <option value="printAndeBook">PrintBook & eBook</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                  <option value="6">6</option>
+                  <option value="7">7</option>
+                  <option value="8">8</option>
+                  <option value="9">9</option>
+                  <option value="10">10</option>
+                  <option value="11">11</option>
+                  
+        
+          
         </select>
         </label>
-
         
 
         <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button large expanded">Add to Cart</a>

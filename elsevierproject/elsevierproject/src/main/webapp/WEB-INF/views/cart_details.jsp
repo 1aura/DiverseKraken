@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart | Week 3</title>
+    <title>Shopping Cart | Welcome </title>
     <link rel="stylesheet" href="css/style.css">
     
     
@@ -78,34 +78,6 @@
     %>
     
    
-
-<!-- Start Top Bar -->
-    <div class="top-bar">
-      <div class="top-bar-left">
-        <ul class="menu">
-          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="#">Home</a></li>
-          
-        </ul>
-      </div>
-      <div class="top-bar-right">
-        
-             <ul class="dropdown menu" data-dropdown-menu>
-            <li id="cart_items"></li>
-            <li class="has-submenu">
-              <a href="/viewCart"> <img src="images/cart.jpg" width="50" height="50"/></a>
-              <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/> View Cart </a></li>
-                <li><a href="/login">Register | Login</a></li>
-              </ul>
-            </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-          
-      </div>
-    </div>
-    <!-- End Top Bar -->
     <br>
     <!-- You can now combine a row and column if you just need a 12 column row -->
     <div class="row columns">
@@ -124,19 +96,6 @@
       <div class="medium-6 columns">
       <% 
      
-      
-      for(Book book : books)
-      {
-    	  
-    	  int quantity = bookCounts.get(book.getBookId());
-    	  double price = book.getPrice();
-    	  totalPrice = book.getPrice() * quantity;
-    	  cartTotal = cartTotal + book.getPrice()*quantity;
-    	  System.out.println("Cart Total "+cartTotal);
-    	  
-      }
-      
-      
       int i = 0;
       for(Book book : books)
       {
@@ -153,17 +112,14 @@
         <div class="row small-up-4">
         
           <div class="column">
-            eBook ISBN : <%=book.geteBookISBN()%>
-          </div>
-          <div class="column">
-            Print book ISBN <%=book.getPaperISBN()%>
+           ISBN: <%=book.getPaperISBN()%>
           </div>
           
           <div class="column">
            
           </div>
           <div class="column">
-            Published On <%=book.getPublishedDate()%>
+            Published On: <%=book.getPublishedDate()%>
           </div>
           <div class="column">
             <form name="f1">
