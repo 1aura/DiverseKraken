@@ -38,6 +38,17 @@ public class BookController {
 		
 	}
 	
+	@RequestMapping("/searchBooks")
+	public ModelAndView bookDetails(@ModelAttribute("books") Iterable<Book> books,@RequestParam("title") String title)
+	{
+		Book book = findBookByTitle(books, title);
+		
+		ModelAndView modelAndView = new ModelAndView("book_details","book",book);
+		modelAndView.addObject("books", books);
+		return modelAndView;
+		
+	}
+	
 	
 	@RequestMapping("/addToCart")
 	public ModelAndView addToCart(@ModelAttribute("books") Iterable<Book> books,
@@ -155,7 +166,21 @@ public class BookController {
 
 	}
 	
-	
+	public Book findBookByTitle(Iterable<Book> books,String title)
+	{
+		
+        Book book = null;
+		
+		for(Book b : books)
+		{
+			if(b.getTitle().toLowerCase().contains(title.toLowerCase()))
+			{
+				book = b;
+			}
+		}
+		return book;
+
+	}
 	
 	public ArrayList<Book> loadBooksIntoCart(Iterable<Book> books,ArrayList<Integer> bookIds)
 	{
