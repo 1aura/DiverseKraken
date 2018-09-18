@@ -3,6 +3,7 @@
 <%@page import="java.util.ArrayList"%>
 <%@page import="java.util.List"%>
 <%@page import="com.elsevier.models.Book"%>
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,7 +25,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/bestSellers">Bestsellers</a></li>
+          <li><a href="/BLAHAA">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
