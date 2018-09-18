@@ -1949,7 +1949,8 @@ label {
 
 label.middle {
     margin: 0 0 1rem;
-    padding: .5625rem 0
+    padding: .5625rem 0;
+    
 }
 
 .help-text {
