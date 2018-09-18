@@ -25,7 +25,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red"></li>
-             <li><a href="/" >Home</a></li>
+              <li><a href="/" >Home</a></li>
           <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
@@ -58,13 +58,12 @@
     <div class="row column text-center">
     
       <h2>
-    THESE ARE ALL THE BOOKS IN STOCK...  
       
       <%
       Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
           
       %>
-
+      THESE ARE THE BESTSELLERS...
       
       </h2>
       <hr>

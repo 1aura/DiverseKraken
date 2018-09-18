@@ -30,7 +30,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
       </div>
       
@@ -45,8 +45,8 @@
                 <li><a href="/login">Register | Login</a></li>
               </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="html/about.html">About Us</a></li>
+            <li><a href="html/contactus.html">Contact</a></li>
           </ul>
           
       </div>

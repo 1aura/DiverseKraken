@@ -18,7 +18,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
       </div>
       
@@ -33,8 +33,8 @@
                 <li><a href="/login">Register | Login</a></li>
               </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+         <li><a href="html/about.html">About Us</a></li>
+            <li><a href="html/contactus.html">Contact</a></li>
           </ul>
           
       </div>
@@ -76,7 +76,7 @@ if (b == "") {
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
                 <label id="error_email" style="color: red;"></label>
                 <label>Password * </label>
-				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
+				 <input type="password" placeholder="Enter Password" name="password" id="password" pattern=".{6,}" title="6 or more characters"/>
             	
             </div>
             
@@ -113,6 +113,7 @@ if (b == "") {
     	        $("#error_email").text("");
     	    }
     	 });
+    	
     </script>
     
       <!-- Footer -->

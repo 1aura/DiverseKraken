@@ -24,10 +24,10 @@
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red"></li>
-          <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
+             <li><a href="/" >Home</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
+          <li><a href="/newBooksIn">New In</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
       
 </ul>
           
@@ -44,8 +44,8 @@
                 <li><a href="/login">Register | Login</a></li>
               </ul>
             </li>
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact</a></li>
+           <li><a href="html/about.html">About Us</a></li>
+            <li><a href="html/contactus.html">Contact</a></li>
           </ul>
           
       </div>
@@ -108,27 +108,19 @@
     	  
       %>
       
-      
          			
-        <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:225px;height:350px;"/>
+        
         <div class="row small-up-4">
         <p>
-        <div class="column" ><%= book.getTitle()%></div>
+        <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:113px;height:175px;"/>
+        
         </p>
 
           <p>
-           <div class="column">
-          Price of One: £<%=book.getPrice()%>
-           <div class="row small-up-4">
-          
-          <div class="column">
-            <a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a>
-          </div>
-        
-        
-        
-        </div> 
-           </div>
+           
+          <div class="column" style="width:200px"><%= book.getTitle()%></div>
+           
+
           </p>
           <p>
            <div class="column">
@@ -144,8 +136,11 @@
             	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
             </form>
             
+            <div class="special"><a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a></div> 
+          
+           
           </div>
-                
+          
        
          
         </div>

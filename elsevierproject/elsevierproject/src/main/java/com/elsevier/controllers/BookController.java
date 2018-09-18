@@ -123,7 +123,19 @@ public class BookController {
 	
 	@RequestMapping("/allBookDetails")
 	public ModelAndView allBookDetails() {
-	    ModelAndView modelAndView = new ModelAndView("testingAllBookDetails");
+	    ModelAndView modelAndView = new ModelAndView("all_books");
+	    return modelAndView;
+	}
+	
+	@RequestMapping("/newBooksIn")
+	public ModelAndView newBooksIn() {
+	    ModelAndView modelAndView = new ModelAndView("new_books_in");
+	    return modelAndView;
+	}
+	
+	@RequestMapping("/bestSellers")
+	public ModelAndView bestSellers() {
+	    ModelAndView modelAndView = new ModelAndView("bestsellers");
 	    return modelAndView;
 	}
 
