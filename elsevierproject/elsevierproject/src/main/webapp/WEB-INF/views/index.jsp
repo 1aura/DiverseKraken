@@ -62,20 +62,22 @@
   </div>
 </div>
 
-<!-- 1. Link to jQuery (1.8 or later), -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
-
-<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
-
-<!-- 2. Add images to <div class="fotorama"></div>. -->
-<div class="fotorama">
-  <img src="thehandmaidstale.jpg">
+<div class="fadein">
+  <img src="Harrypotter.jpg">
   <img src="Joes30minutemeals.jpg">
+  <img src="crazyrichasains.jpg">
 </div>
 
-
-
-
+<script type="text/jQuery"> 
+$(function(){
+    $('.fadein img:gt(0)').hide();
+    setInterval(function(){
+      $('.fadein :first-child').fadeOut()
+         .next('img').fadeIn()
+         .end().appendTo('.fadein');}, 
+      3000);
+});
+</script>
 
     
     <div class="row column text-center">
