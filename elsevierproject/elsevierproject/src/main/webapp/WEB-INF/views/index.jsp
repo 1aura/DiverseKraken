@@ -16,7 +16,7 @@
 <div class="header">
   <a href="#default" class="logo">
 
-  <img src="/images/DiverseBooks.jpg" width=300/>
+  <img src="/images/DiverseBooks.jpg" height=50 width=100/>
 
   </a>
   </div>
@@ -34,7 +34,7 @@
           
       </div>
       
-      <div class="nav-bar-right">
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             
