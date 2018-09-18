@@ -76,7 +76,7 @@ if (b == "") {
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
                 <label id="error_email" style="color: red;"></label>
                 <label>Password * </label>
-				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
+				 <input type="password" placeholder="Enter Password" name="password" id="password" pattern=".{6,}" title="6 or more characters"/>
             	
             </div>
             
