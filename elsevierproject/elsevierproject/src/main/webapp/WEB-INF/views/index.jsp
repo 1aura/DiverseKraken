@@ -23,8 +23,8 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href=# >Home</a></li>
-          <li><a href="\WEB-INF\views\book_details">Bestsellers</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
+          <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
    
