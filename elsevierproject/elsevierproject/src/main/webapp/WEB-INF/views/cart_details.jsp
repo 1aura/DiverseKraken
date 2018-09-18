@@ -165,11 +165,11 @@
           </div>
           <div class="small-3 columns">
              <input type="hidden" name="order_total" id="cart_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="cart_total_label">£<%=cartTotal %></label>
+            <label for="middle-label" class="middle" id="cart_total_label">£<%=cartTotal %> </label>
            </div>
        </div>
            
-       
+      
 
           <div class="row">
           <div class="small-3 columns">
@@ -187,7 +187,7 @@
           </div>
           <div class="small-3 columns">
             <input type="hidden" name="order_total" id="order_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal %></label>
            </div>
       
         </div>
