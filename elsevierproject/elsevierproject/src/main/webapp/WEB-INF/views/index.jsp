@@ -25,7 +25,7 @@
           <li><a href="/index">Home</a></li>
           <li><a href="\WEB-INF\views\book_details">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
       </ul>
    
     

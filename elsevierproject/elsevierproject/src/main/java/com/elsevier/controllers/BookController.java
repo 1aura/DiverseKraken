@@ -117,7 +117,7 @@ public class BookController {
 	
 	@RequestMapping("/allBookDetails")
 	public ModelAndView allBookDetails() {
-	    ModelAndView modelAndView = new ModelAndView("testingAllBookDetails");
+	    ModelAndView modelAndView = new ModelAndView("all_books");
 	    return modelAndView;
 	}
 
