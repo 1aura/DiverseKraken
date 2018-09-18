@@ -59,7 +59,7 @@
         <div class="halves">
            <h3> Login  </h3>
                 
-               <form action="loginProcess" method="post"> 
+               <form action="/loginProcess" method="post"> 
               
                <label>Email ID * </label>
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
@@ -67,7 +67,7 @@
 				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
             	<input type="submit" class="button expanded" value="Submit">
              
-<!--  
+
 <style>
 #text2 {display:none;color:red}
 </style>
@@ -85,7 +85,7 @@ if (event.getModifierState("CapsLock")) {
     text.style.display = "none"
   }
 });
-</script>-->
+</script>
 
      
               
