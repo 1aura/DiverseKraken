@@ -95,6 +95,7 @@ public class CustomerController {
 		
 		customer.setPassword(encryptedString);
 		
+		
 		Customer c = customerService.saveCustomer(customer);
 	  
 		if(c!=null)
@@ -114,6 +115,7 @@ public class CustomerController {
 										@RequestParam("password") String password)
 	{
 		
+		final String secretKey = "diversity?!";
 		ModelAndView modelAndView  = null;
 		
 		System.out.println("Email is "+email);
@@ -121,8 +123,9 @@ public class CustomerController {
 		
 		System.out.println("Password is "+password);
 		
+		String encryptedString = AES.encrypt(password, secretKey) ;
 		
-		Customer c = customerService.loginProcess(email, password);
+		Customer c = customerService.loginProcess(email, encryptedString);
 	  
 		if(c!=null)
 		{
