@@ -25,7 +25,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:red"></li>
-          <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
@@ -60,7 +60,7 @@
       
       
       <%
-       //  Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
+      Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
           
       %>
       THIS IS ALL THE BOOKS...
@@ -70,13 +70,27 @@
     </div>
 
     <div class="row small-up-2 large-up-4">
+        <%
     
-    
-      <div class="column">
+    for(Book book: books)
+    {
+      
+   
+    %>
+          <div class="column">
+      
+        <a href="/bookDetails?bookId=<%=book.getBookId()%>"><img class="thumbnail" src="<%=book.getBookImage()%>"></a>
+        <h5><%= book.getTitle()%></h5>
+        <p>$<%= book.getPrice()%></p>
+        <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
+        <a href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
       </div>
     
-  
+    <%
+    }
+    %>  
     </div>
+    
 
     <hr>
 
