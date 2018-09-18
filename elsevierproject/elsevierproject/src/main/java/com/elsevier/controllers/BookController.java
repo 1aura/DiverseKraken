@@ -126,6 +126,18 @@ public class BookController {
 	    ModelAndView modelAndView = new ModelAndView("testingAllBookDetails");
 	    return modelAndView;
 	}
+	
+	@RequestMapping("/newBooksIn")
+	public ModelAndView newBooksIn() {
+	    ModelAndView modelAndView = new ModelAndView("new_books_in");
+	    return modelAndView;
+	}
+	
+	@RequestMapping("/bestSellers")
+	public ModelAndView bestSellers() {
+	    ModelAndView modelAndView = new ModelAndView("bestsellers");
+	    return modelAndView;
+	}
 
 	
 	public ArrayList<Integer> loadBookIds(ArrayList<Book> cartItems)
