@@ -77,23 +77,30 @@ public class CustomerController {
 	
 
 	@RequestMapping("/registerProcess")
-	public ModelAndView registerProcess(@ModelAttribute("Customer") Customer customer)
+	public ModelAndView registerProcess(@RequestParam("email") String email,
+										@RequestParam("password") String password,
+										@RequestParam("firstname") String firstName,
+										@RequestParam("lastname") String lastName)
 	{
 		
 		ModelAndView modelAndView  = null;
 		
-		System.out.println("Customer Firstname is "+customer.getFirstName());
+		System.out.println("Customer Firstname is "+firstName);
 		
 		
-		System.out.println("Customer Password is "+customer.getPassword());
+		System.out.println("Customer Password is "+password);
 		
 		
 		final String secretKey = "diversity?!";
 	     
-	    String originalString = customer.getPassword();
-	    String encryptedString = AES.encrypt(originalString, secretKey) ;
-		
+	   // String originalString = customer.getPassword();
+	    String encryptedString = AES.encrypt(password, secretKey) ;
+		Customer customer = new Customer();
 		customer.setPassword(encryptedString);
+		customer.setFirstName(firstName);
+		customer.setLastName(lastName);
+		customer.setEmail(email);
+		System.out.println("Customer Password is "+customer.getPassword());
 		
 		
 		Customer c = customerService.saveCustomer(customer);
