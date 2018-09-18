@@ -61,7 +61,6 @@
   </div>
 </div>
 
-
     
     <div class="row column text-center">
       <h2>
