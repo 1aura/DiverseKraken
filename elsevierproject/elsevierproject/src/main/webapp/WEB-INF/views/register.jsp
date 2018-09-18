@@ -113,6 +113,7 @@ if (b == "") {
     	        $("#error_email").text("");
     	    }
     	 });
+    	
     </script>
     
       <!-- Footer -->
