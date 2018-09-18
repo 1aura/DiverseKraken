@@ -4,11 +4,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
-
-
-
-import java.util.Set;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -128,7 +123,7 @@ public class BookController {
 	
 	@RequestMapping("/allBookDetails")
 	public ModelAndView allBookDetails() {
-	    ModelAndView modelAndView = new ModelAndView("all_books");
+	    ModelAndView modelAndView = new ModelAndView("testingAllBookDetails");
 	    return modelAndView;
 	}
 
