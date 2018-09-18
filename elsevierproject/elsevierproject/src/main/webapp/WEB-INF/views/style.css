@@ -33,6 +33,7 @@ html {
 article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
     display: block;
 }
+}
 audio, canvas, progress, video {
     display: inline-block;
     vertical-align: baseline;
@@ -816,12 +817,12 @@ h6 {
 }
 }a {
     background-color: transparent;
-    color: #2199e8;
+    color: #000000;
     text-decoration: none;
     cursor: pointer;
 }
 a:focus, a:hover {
-    color: #1585cf;
+    color: #b366ff;
 }
 a img {
     border: 0;
@@ -867,6 +868,7 @@ blockquote, blockquote p {
     line-height: 1.6;
     color: #8a8a8a;
 }
+
 cite {
     display: block;
     font-size: .8125rem;
@@ -1025,7 +1027,7 @@ h2, h3 {
     outline: 0;
 }
 .button:focus, .button:hover {
-    background: #1583cc;
+    background: #b366ff;
     color: #fff;
 }
 .button.tiny {
@@ -1805,7 +1807,7 @@ select[multiple] {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent #b366ff transparent transparent;
     border-right-style: solid;
     float: left;
     margin-left: 0;
@@ -1820,7 +1822,7 @@ select[multiple] {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent #b366ff;
     border-left-style: solid;
 }
 .dropdown.menu .has-submenu.is-left-arrow.opens-inner .submenu {
@@ -1866,6 +1868,7 @@ select[multiple] {
     top: 0; /* Position the navbar at the top of the page */
     width: 100%;
     height: 20%;
+    float: centre;
 }
 .is-dropdown-menu.vertical {
     width: 100px;
@@ -1923,7 +1926,8 @@ select[multiple] {
     color: #fefefe;
 }
 .logo {
-	 text-align: center;
+    margin-left: 50%;
+    margin-right: 50%; 
 }
 .media-object {
     margin-bottom: 1rem;
@@ -2349,7 +2353,7 @@ body, html {
     outline: 0;
 }
 .slider-handle:hover {
-    background-color: #1583cc;
+    background-color: #b366ff;
 }
 .slider-handle.is-dragging {
     transition: all 0s linear;
@@ -2930,5 +2934,8 @@ table.hover tr:nth-of-type(even):hover {
     border: 1px solid #ccc;  
   }
 }
+.displayed {
+	margin-right: auto;
+	margin-left: auto;
 }
 }

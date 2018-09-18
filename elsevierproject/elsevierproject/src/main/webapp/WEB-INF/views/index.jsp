@@ -13,10 +13,10 @@
   <body>
   <!-- Just an image -->
 
-<div class="header">
+<div class="displayed">
   <a href="#default" class="logo">
 
-  <img src="/images/DiverseBooks.jpg" height=50 width=100/>
+  <img  class="header" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400 class="logo"/>
 
   </a>
   </div>
@@ -24,13 +24,13 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:red"></li>
-          <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
+          <li><a href="/index">Home</a></li>
+          <li><a href="\WEB-INF\views\book_details">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
-      
-</ul>
+      </ul>
+   
+    
           
       </div>
       
