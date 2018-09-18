@@ -64,7 +64,7 @@
       Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
           
       %>
-      THIS IS ALL THE BOOKS...
+
       
       </h2>
       <hr>
