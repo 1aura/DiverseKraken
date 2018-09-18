@@ -107,50 +107,60 @@
     	  System.out.println("Cart Total "+cartTotal);
     	  
       %>
-       
-        <img class="thumbnail" src="<%=book.getBookImage()%>"/>
+      
+      
+         			
+        <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:225px;height:350px;"/>
         <div class="row small-up-4">
-        
-          <div class="column">
-           ISBN: <%=book.getPaperISBN()%>
-          </div>
-          
-          <div class="column">
-           
-          </div>
-          <div class="column">
-            Published On: <%=book.getPublishedDate()%>
-          </div>
-          <div class="column">
-            <form name="f1">
-            	<input type="hidden" name="price" value="<%=price%>"/>
-            	<input type="hidden" name="cart_total" value="<%=cartTotal%>"/>
-            	Price of One: £<%=book.getPrice()%> 
-            	Total Price: <label type="hidden" id="price_label<%=i%>">£<%=totalPrice%></label>
-            	<input type="hidden" name="cart_total" value="<%=price%>"/>
-            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
-            </form>
-          </div>
-          
-         
-        </div>
-        
-        <div class="row small-up-4">
+        <p>
+        <div class="column" ><%= book.getTitle()%></div>
+        </p>
+
+          <p>
+           <div class="column">
+          Price of One: £<%=book.getPrice()%>
+           <div class="row small-up-4">
           
           <div class="column">
             <a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a>
           </div>
         
-        </div>
         
-        <hr>
+        
+        </div> 
+           </div>
+          </p>
+          <p>
+           <div class="column">
+          Total Price: <label type="hidden" id="price_label<%=i%>">£<%=totalPrice%></label>
+            	<!--  <input type="hidden" name="cart_total" value=""/> -->
+           </div>
+          </p>
+          <div class="column">
+            <form name="f1">
+            	<input type="hidden" name="price" value="<%=price%>"/>
+            	<input type="hidden" name="cart_total" value="<%=cartTotal%>"/>
+            	
+            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
+            </form>
+            
+          </div>
+                
+       
+         
+        </div>
+      
+         
+       <hr>
       <%
       i++;
       }
       %>
      
       </div>
+      
       <div class="medium-6 large-5 columns">
+      
         <h3>Order Summary </h3>
         <p> </p>
 
@@ -162,10 +172,9 @@
              <input type="hidden" name="order_total" id="cart_total" value="<%=cartTotal %>"/> 
             <label for="middle-label" class="middle" id="cart_total_label">£<%=cartTotal %></label>
            </div>
-       
-           
        </div>
-
+           
+       
 
           <div class="row">
           <div class="small-3 columns">
