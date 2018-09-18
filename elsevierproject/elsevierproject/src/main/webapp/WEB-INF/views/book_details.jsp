@@ -24,10 +24,10 @@
 		<div class="navbar-left">
 			<ul class="menu">
 				<li class="menu-text" style="color: red"></li>
-				<li><a href="/">Home</a></li>
-				<li><a href="html/TESTING_link.html">Bestsellers</a></li>
-				<li><a href="html/TESTING_link.html">New In</a></li>
-				<li><a href=/allBookDetails>All Books</a></li>
+				      <li><a href="/" >Home</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
+          <li><a href="/newBooksIn">New In</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
 
 			</ul>
 
