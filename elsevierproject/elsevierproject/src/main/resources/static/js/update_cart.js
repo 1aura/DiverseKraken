@@ -2,17 +2,20 @@
 function calculateTotalPrice(price,quantity,price_label)
 {
 	     
-	       
+	
 	       var cartTotal = document.getElementById("cart_total").value;
 	       var orderTotal = document.getElementById("order_total").value;
+	       //var totalPrice = document.getElementById("price_label").value;
+	       
 	       
 	       var totalPrice = parseFloat(price) * parseFloat(quantity);
+	       var update = totalPrice - parseFloat(price);
 	       
 	       price_label.innerHTML = "£"+totalPrice;
 	       
-	       cTotal  = parseFloat(cartTotal) + parseFloat(price);
+	       cTotal  = parseFloat(cartTotal) + parseFloat(update);
 	       
-	       oTotal = parseFloat(orderTotal) + parseFloat(price);
+	       oTotal = parseFloat(orderTotal) + parseFloat(update);
 	       
 	       document.getElementById("cart_total_label").innerHTML = "£"+cTotal;
 	       

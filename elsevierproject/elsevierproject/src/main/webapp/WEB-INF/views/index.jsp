@@ -13,11 +13,9 @@
   <body>
   <!-- Just an image -->
 
-<div class="displayed">
-  <a href="#default" class="logo">
-
-  <img  class="header" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400 class="logo"/>
-
+<div class="header">
+  <a href="#default" >
+  <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
   </a>
   </div>
     <!-- Start Top Bar -->
@@ -27,7 +25,7 @@
           <li><a href="/index">Home</a></li>
           <li><a href="\WEB-INF\views\book_details">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
       </ul>
    
     

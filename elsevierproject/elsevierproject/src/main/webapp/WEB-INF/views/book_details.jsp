@@ -90,16 +90,13 @@
         <img class="thumbnail" src="<%=book.getBookImage()%>"/>
         <div class="row small-up-4">
           <div class="column">
-            eBook ISBN : <%=book.geteBookISBN()%>
+             ISBN: <%=book.getPaperISBN()%>
           </div>
           <div class="column">
-            Print book ISBN <%=book.getPaperISBN()%>
+           Price:       £<%=book.getPrice()%>
           </div>
           <div class="column">
-           Price :       $<%=book.getPrice()%>
-          </div>
-          <div class="column">
-            Published On <%=book.getPublishedDate()%>
+            Published On: <%=book.getPublishedDate()%>
           </div>
         
         </div>

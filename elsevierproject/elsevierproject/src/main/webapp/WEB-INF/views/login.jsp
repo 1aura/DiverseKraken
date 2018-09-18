@@ -27,8 +27,7 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="#">Home</a></li>
+         
           
       </div>
       
