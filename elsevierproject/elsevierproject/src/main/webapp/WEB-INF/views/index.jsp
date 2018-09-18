@@ -9,6 +9,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping</title>
     <link rel="stylesheet" href="css/style.css"/>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/> 
   </head>
   <body>
   <!-- Just an image -->
@@ -61,49 +62,20 @@
   </div>
 </div>
 
-<script type="text/javascript">
-var slideimages = new Array() // create new array to preload images
-slideimages[0] = new Image() // create new instance of image object
-slideimages[0].src = "crazyrichasains.jpg" // set image object src property to an image's src, preloading that image in the process
-slideimages[1] = new Image()
-slideimages[1].src = "countrylife.jpg"
-slideimages[2] = new Image()
-slideimages[2].src = "Joes30minutemeals.jpg"
-</script>
+<!-- 1. Link to jQuery (1.8 or later), -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script> <!-- 33 KB -->
 
-<div class="container">
- <ul><img src="firstcar.gif" id="slide" width=100 height=56 /></ul>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.js"></script> <!-- 16 KB -->
+
+<!-- 2. Add images to <div class="fotorama"></div>. -->
+<div class="fotorama">
+  <img src="thehandmaidstale.jpg">
+  <img src="Joes30minutemeals.jpg">
 </div>
 
-<script type="text/javascript">
-var step = 0
-var whichimage = 0
 
-function slideit(){
- //if browser does not support the image object, exit.
- if (!document.images)
-  return
- document.getElementById('slide').src = slideimages[step].src
- whichimage = step
- if (step<2)
-  step++
- else
-  step=0
- //call function "slideit()" every 2.5 seconds
- setTimeout("slideit()",2500)
-}
 
-function slidelink(){
- if (whichimage == 0)
-  window.location = "crazyrichasains"
- else if (whichimage == 1)
-  window.location = "countrylife.jpg"
- else if (whichimage == 2)
-  window.location = "Joes30minutemeals.jpg"
-}
 
-slideit()
-</script> 
 
     
     <div class="row column text-center">
