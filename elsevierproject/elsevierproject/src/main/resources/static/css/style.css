@@ -283,7 +283,7 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: "Helvetica Neue", Georgia,  Roboto, Arial, sans-serif;
+    font-family: "Lucida Sans Unicode", Georgia,  Roboto, Arial, sans-serif;
     font-weight: 400
 }
 
@@ -1371,7 +1371,7 @@ h6 {
 
 a {
     background-color: transparent;
-    color: #2199e8;
+    color: #ffffff;
     text-decoration: none;
     cursor: pointer
 }
@@ -1641,7 +1641,7 @@ p+.stat {
     padding: .85em 1em;
     margin: 0 1rem 1rem 0;
     font-size: .9rem;
-    background: #2199e8;
+    background: #000000;
     color: #fff
 }
 
@@ -2647,7 +2647,7 @@ screen and (min-width:75em) {
 
 .dropdown-pane {
     background-color: #fefefe;
-    border: 1px solid #cacaca;
+    border: 1px solid #000000;
     display: block;
     padding: 1rem;
     position: absolute;
@@ -2708,7 +2708,7 @@ screen and (min-width:75em) {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent #2199e8 transparent transparent;
+    border-color: transparent #ffffff transparent transparent;
     border-right-style: solid;
     float: left;
     margin-left: 0;
@@ -2726,7 +2726,7 @@ screen and (min-width:75em) {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent transparent transparent #2199e8;
+    border-color: transparent transparent transparent #800080;
     border-left-style: solid
 }
 
@@ -2828,7 +2828,7 @@ screen and (min-width:75em) {
     white-space: nowrap;
     cursor: default;
     border-radius: 0;
-    background: #2199e8;
+    background: #000000;
     color: #fefefe
 }
 
@@ -4041,7 +4041,8 @@ table.hover tr:nth-of-type(even):hover {
 
 .navbar,
 .navbar ul {
-    background-color: #eee
+    background-color: #000000;
+    text-color: #ffffff
 }
 
 .navbar input {

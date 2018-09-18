@@ -13,11 +13,9 @@
   <body>
   <!-- Just an image -->
 
-<div class="displayed">
-  <a href="#default" class="logo">
-
-  <img  class="header" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400 class="logo"/>
-
+<div class="header">
+  <a href="#default" >
+  <img  class="header" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
   </a>
   </div>
     <!-- Start Top Bar -->
