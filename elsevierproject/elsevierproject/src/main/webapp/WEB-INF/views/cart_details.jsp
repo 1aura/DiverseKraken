@@ -108,7 +108,6 @@
     	  
       %>
       
-      
          			
         <img class="thumbnail" src="<%=book.getBookImage()%>" style="width:225px;height:350px;"/>
         <div class="row small-up-4">
@@ -120,10 +119,6 @@
            <div class="column">
           Price of One: £<%=book.getPrice()%>
            <div class="row small-up-4">
-          
-          <div class="column">
-            <a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a>
-          </div>
         
         
         
@@ -144,8 +139,11 @@
             	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
             </form>
             
+            <div class="special"><a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a></div> 
+            
+           
           </div>
-                
+          
        
          
         </div>

@@ -4067,3 +4067,7 @@ table.hover tr:nth-of-type(even):hover {
 	margin-right: auto;
 }
 
+.special{
+	display: block
+	
+}
