@@ -61,6 +61,50 @@
   </div>
 </div>
 
+<script type="text/javascript">
+var slideimages = new Array() // create new array to preload images
+slideimages[0] = new Image() // create new instance of image object
+slideimages[0].src = "crazyrichasains.jpg" // set image object src property to an image's src, preloading that image in the process
+slideimages[1] = new Image()
+slideimages[1].src = "countrylife.jpg"
+slideimages[2] = new Image()
+slideimages[2].src = "Joes30minutemeals.jpg"
+</script>
+
+<div class="container">
+ <ul><img src="firstcar.gif" id="slide" width=100 height=56 /></ul>
+</div>
+
+<script type="text/javascript">
+var step = 0
+var whichimage = 0
+
+function slideit(){
+ //if browser does not support the image object, exit.
+ if (!document.images)
+  return
+ document.getElementById('slide').src = slideimages[step].src
+ whichimage = step
+ if (step<2)
+  step++
+ else
+  step=0
+ //call function "slideit()" every 2.5 seconds
+ setTimeout("slideit()",2500)
+}
+
+function slidelink(){
+ if (whichimage == 0)
+  window.location = "crazyrichasains"
+ else if (whichimage == 1)
+  window.location = "countrylife.jpg"
+ else if (whichimage == 2)
+  window.location = "Joes30minutemeals.jpg"
+}
+
+slideit()
+</script> 
+
     
     <div class="row column text-center">
       <h2>
