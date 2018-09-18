@@ -40,20 +40,38 @@
       </div>
     </div>
     <!-- End Top Bar -->
-  
+
+<script type="text/javascript">
+function validateForm() {
+var a = document.forms["myForm"]["firstname"].value;
+var b = document.forms["myForm"]["lastname"].value;
+
+if (a == "") {
+		alert("First Name must be filled out.");
+		return false;
+		}
+		
+if (b == "") {
+		alert("Last Name must be filled out.");
+		return false;
+}		
+		
+}
+</script>
 
     <div class="callout large">
       <div class="row column">
         
-        <form action="/registerProcess" method="post">
+        <form name="myForm" action="/registerProcess" onsubmit="return validateForm()" method="post">
         <div class="medium-6">
            <h3> Create an account  </h3>
+           <p> Please note: Fields marked with a * must be filled out. </p>
                 
                 
-               <label>Firstname * </label>
-               <input type="text" placeholder="Enter firstname" name="firstName" id="firstName"/> 
-               <label>Lastname * </label>
-               <input type="text" placeholder="Enter lastname" name="lastName" id="lastName"/> 
+               <label>First Name * </label>
+               <input type="text" placeholder="Enter First Name" name="firstname" id="firstName"/> 
+               <label>Last Name * </label>
+               <input type="text" placeholder="Enter Last Name" name="lastname" id="lastName"/> 
                <label>Email ID * </label>
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
                 <label>Password * </label>
