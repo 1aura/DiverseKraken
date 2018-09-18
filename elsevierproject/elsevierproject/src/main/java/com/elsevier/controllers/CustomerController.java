@@ -87,6 +87,14 @@ public class CustomerController {
 		
 		System.out.println("Customer Password is "+customer.getPassword());
 		
+		
+		final String secretKey = "diversity?!";
+	     
+	    String originalString = customer.getPassword();
+	    String encryptedString = AES.encrypt(originalString, secretKey) ;
+		
+		customer.setPassword(encryptedString);
+		
 		Customer c = customerService.saveCustomer(customer);
 	  
 		if(c!=null)
