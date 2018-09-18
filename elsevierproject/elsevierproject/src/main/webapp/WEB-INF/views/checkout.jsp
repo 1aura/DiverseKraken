@@ -35,7 +35,8 @@
           
         </ul>
       </div>
-      <div class="top-bar-right">
+      <!--  small change from top to nav -->
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             <li id="cart_items"></li>
