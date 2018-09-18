@@ -25,7 +25,7 @@
           <li><a href=# >Home</a></li>
           <li><a href="\WEB-INF\views\book_details">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
-          <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
       </ul>
    
     
@@ -54,12 +54,14 @@
 <div class="searchbar">
   <a class="active" href="#home"></a>
   <div class="search-container">
-    <form action="/action_page.php">
-      <input type="text" placeholder="Search.." name="search">
+    <form action="/searchBooks?bookTitle">
+      <input type="text" placeholder="Search.." name="title">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
 </div>
+
+
     
     <div class="row column text-center">
       <h2>
@@ -88,9 +90,9 @@
       
         <a href="/bookDetails?bookId=<%=book.getBookId()%>"><img class="thumbnail" src="<%=book.getBookImage()%>"></a>
         <h5><%= book.getTitle()%></h5>
-        <p>$<%= book.getPrice()%></p>
+        <p>£<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
-        <a href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
+        <a href="/addToCart?bookId=<%=book.getBookId()%>" class="button expanded">Add to Cart</a>
       </div>
     
     <%
