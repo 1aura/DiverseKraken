@@ -62,7 +62,7 @@ if (b == "") {
     <div class="callout large">
       <div class="row column">
         
-        <form name="myForm" action="/registerProcess" onsubmit="return validateForm()" method="post">
+        <form id="myForm" name="myForm" action="/registerProcess" onsubmit="return validateForm()" method="post">
         <div class="medium-6">
            <h3> Create an account  </h3>
            <p> Please note: Fields marked with a * must be filled out. </p>
@@ -74,6 +74,7 @@ if (b == "") {
                <input type="text" placeholder="Enter Last Name" name="lastname" id="lastName"/> 
                <label>Email ID * </label>
                 <input type="text" placeholder="Enter email" name="email" id="email"/> 
+                <label id="error_email" style="color: red;"></label>
                 <label>Password * </label>
 				 <input type="password" placeholder="Enter Password" name="password" id="password"/>
             	
@@ -100,6 +101,18 @@ if (b == "") {
     <script src="js/elsevier.js"></script>
     <script>
       $(document).foundation();
+      $("#email").keyup(function(){
+    	     var email = $("#email").val();
+    	     var filter = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    	     if (!filter.test(email)) {
+    	       //alert('Please provide a valid email address');
+    	       $("#error_email").text(email+" is not a valid email");
+    	       email.focus;
+    	       //return false;
+    	    } else {
+    	        $("#error_email").text("");
+    	    }
+    	 });
     </script>
     
       <!-- Footer -->
@@ -113,6 +126,8 @@ if (b == "") {
     
   </body>
 </html>
+
+
 
 
     
