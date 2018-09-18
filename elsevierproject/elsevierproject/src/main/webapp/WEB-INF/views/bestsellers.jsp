@@ -58,7 +58,6 @@
     <div class="row column text-center">
     
       <h2>
-    THESE ARE ALL THE BOOKS IN STOCK...  
       
       <%
       Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
