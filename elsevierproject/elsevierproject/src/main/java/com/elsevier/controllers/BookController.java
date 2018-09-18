@@ -113,28 +113,14 @@ public class BookController {
 		return modelAndView;
 		
 	}
-	
-	//MONICA TRYING TO MAKE DYNAMIC LINKS WORK
-//	@RequestMapping("/allBookDetails")
-//	public ModelAndView allBookDetails(@ModelAttribute("books")Iterable<Book> books,int bookId)
-//		{
-//		bookId = 1;
-//			Book book = findBookById(books, bookId);
-//			
-//			ModelAndView modelAndView = new ModelAndView("book_details","book",book);
-//			modelAndView.addObject("books", books);
-//			return modelAndView;
-//			
-//		}
+
 	
 	@RequestMapping("/allBookDetails")
 	public ModelAndView allBookDetails() {
 	    ModelAndView modelAndView = new ModelAndView("testingAllBookDetails");
 	    return modelAndView;
 	}
-		
-	
-	//END MONICA TESTING
+
 	
 	public ArrayList<Integer> loadBookIds(ArrayList<Book> cartItems)
 	{
