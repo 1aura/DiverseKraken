@@ -1372,13 +1372,12 @@ h6 {
 a {
     background-color: transparent;
     color: #ffffff;
-    text-decoration: none;
-    cursor: pointer
+    cursor: pointer;
 }
 
 a:focus,
 a:hover {
-    color: #1585cf
+    color: #0080c0;
 }
 
 a img {
@@ -2651,7 +2650,7 @@ screen and (min-width:75em) {
 }
 
 .dropdown-pane {
-    background-color: #fefefe;
+    background-color: #000000;
     border: 1px solid #000000;
     display: block;
     padding: 1rem;
@@ -2700,8 +2699,9 @@ screen and (min-width:75em) {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: #2199e8 transparent transparent;
+    border-color: #03afd3 transparent transparent;
     border-top-style: solid;
+    background-colour: #c0c0c0;
     position: absolute;
     top: 12px;
     right: 5px
@@ -2713,7 +2713,7 @@ screen and (min-width:75em) {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent #ffffff transparent transparent;
+    border-color: transparent #c0c0c0 transparent transparent;
     border-right-style: solid;
     float: left;
     margin-left: 0;
@@ -2731,7 +2731,7 @@ screen and (min-width:75em) {
     width: 0;
     height: 0;
     border: 5px inset;
-    border-color: transparent transparent transparent #800080;
+    border-color:  #800080;
     border-left-style: solid
 }
 
@@ -2756,8 +2756,8 @@ screen and (min-width:75em) {
     left: 100%;
     min-width: 200px;
     z-index: 1;
-    background: #fefefe;
-    border: 1px solid #cacaca;
+    background: #000000;
+    border: 1px solid #808080;
     
 }
 
