@@ -125,9 +125,10 @@
             <form name="f1">
             	<input type="hidden" name="price" value="<%=price%>"/>
             	<input type="hidden" name="cart_total" value="<%=cartTotal%>"/>
-            	Price <label id="price_label<%=i%>">$<%=totalPrice%></label>
+            	Price of One: £<%=book.getPrice()%> 
+            	Total Price: <label type="hidden" id="price_label<%=i%>">£<%=totalPrice%></label>
             	<input type="hidden" name="cart_total" value="<%=price%>"/>
-            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" oninput="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
+            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
             </form>
           </div>
           
@@ -159,8 +160,9 @@
           </div>
           <div class="small-3 columns">
              <input type="hidden" name="order_total" id="cart_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="cart_total_label">$<%=cartTotal %></label>
+            <label for="middle-label" class="middle" id="cart_total_label">£<%=cartTotal %></label>
            </div>
+       
            
        </div>
 
@@ -181,7 +183,7 @@
           </div>
           <div class="small-3 columns">
             <input type="hidden" name="order_total" id="order_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="order_total_label">$<%=cartTotal%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal%></label>
            </div>
       
         </div>
