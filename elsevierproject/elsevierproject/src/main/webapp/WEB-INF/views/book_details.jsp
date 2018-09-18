@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Foundation | Welcome</title>
+    <title>Book details | Welcome</title>
     <link rel="stylesheet" href="css/style.css">
     
     
@@ -32,7 +32,7 @@
           
       </div>
       
-      <div class="nav-bar-right">
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             

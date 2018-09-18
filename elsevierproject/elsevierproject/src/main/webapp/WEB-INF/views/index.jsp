@@ -16,7 +16,7 @@
 <div class="header">
   <a href="#default" class="logo">
 
-  <img src="/images/DiverseBooks.jpg" width=300/>
+  <img src="/images/DiverseBooks.jpg" height=50 width=100/>
 
   </a>
   </div>
@@ -34,7 +34,7 @@
           
       </div>
       
-      <div class="nav-bar-right">
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             
@@ -42,18 +42,26 @@
               <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
-                <li><a href="/login">Register | Login</a></li>
+                <li><a href="/login"> Register | Login</a></li>
               </ul>
             </li>
-            <li><a href="html/about.html">About Us</a></li>
-            <li><a href="html/contactus.html">Contact</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
           </ul>
           
       </div>
     </div>
     <!-- End Top Bar -->
 
-
+<div class="searchbar">
+  <a class="active" href="#home"></a>
+  <div class="search-container">
+    <form action="/action_page.php">
+      <input type="text" placeholder="Search.." name="search">
+      <button type="submit"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
     
     <div class="row column text-center">
       <h2>
@@ -82,7 +90,7 @@
       
         <a href="/bookDetails?bookId=<%=book.getBookId()%>"><img class="thumbnail" src="<%=book.getBookImage()%>"></a>
         <h5><%= book.getTitle()%></h5>
-        <p>£<%= book.getPrice()%></p>
+        <p>$<%= book.getPrice()%></p>
         <a href="/bookDetails?bookId=<%=book.getBookId()%>" class="button expanded">View book details</a>
         <a href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
       </div>

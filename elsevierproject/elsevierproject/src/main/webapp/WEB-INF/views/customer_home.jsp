@@ -34,7 +34,7 @@
           
       </div>
       
-      <div class="nav-bar-right">
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             

@@ -17,26 +17,23 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-<<<<<<< Updated upstream
           <li class="menu-text" style="color:red"></li>
           <li><a href="\WEB-INF\views\index.jsp">Home</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">Bestsellers</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">New In</a></li>
           <li><a href="\WEB-INF\views\book_details.jsp">All Books</a></li>
       
-</ul>
-=======
-          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/></li>
-          <li><a href="#">Home</a></li>
->>>>>>> Stashed changes
+	</ul>
+        
           
       </div>
       
-      <div class="nav-bar-right">
+      <div class="navbar-right">
         
              <ul class="dropdown menu" data-dropdown-menu>
             
             <li class="has-submenu">
+              
               <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
