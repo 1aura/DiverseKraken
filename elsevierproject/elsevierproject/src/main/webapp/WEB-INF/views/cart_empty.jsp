@@ -30,7 +30,7 @@ body,h1,h2,h3,h4,h5,h6 {font-family: "Karma", sans-serif}
       <div class="navbar-left">
         <ul class="menu">
           <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="#">Home</a></li>
+          <li><a href="/">Home</a></li>
           
       </div>
       
