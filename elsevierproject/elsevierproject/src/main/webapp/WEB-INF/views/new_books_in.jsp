@@ -55,22 +55,23 @@
 
 	<div class="row column text-center">
 
-		<h2>
+		<h3>
 
-			<hr>
 			<%
 				Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
 			%>
-			Take a look at our new books...
+			Take a look at our new books - published in 2018
 
-		</h2>
-		<hr>
+		</h3>
+		
 	</div>
 
 	<div class="row small-up-2 large-up-4">
 		<%
 			for(Book book: books)
 		    {
+				if(book.getPublishedDate().contains("2018"))
+				{
 		%>
 		<div class="column">
 
@@ -86,6 +87,7 @@
 
 		<%
 			}
+		  }
 		%>
 	</div>
 
