@@ -34,9 +34,9 @@
              <ul class="dropdown menu" data-dropdown-menu>
             
             <li class="has-submenu">
-              <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
+              <a href="/viewCart"><img src="images/shopping_cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
-                <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
+                <li><a href="/viewCart"><img src="images/shopping_cart.jpg" width="50" height="50"/></a></li>
                 <li><a href="/login"> Register | Login</a></li>
               </ul>
             </li>
