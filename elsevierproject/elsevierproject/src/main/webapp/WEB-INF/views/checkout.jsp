@@ -18,8 +18,10 @@
     <form action="/checkoutProcess" method="post">
     
      <%
+     
     double orderTotal = (Double) request.getAttribute("order_total");
-    %>
+     System.err.println(request.getAttribute("order_total"));
+     %>
     
    
 
@@ -247,7 +249,6 @@
     </script>
 
         <input type="submit" class="button large expanded" value="Checkout"/>
-       
       </div>  
       
       
