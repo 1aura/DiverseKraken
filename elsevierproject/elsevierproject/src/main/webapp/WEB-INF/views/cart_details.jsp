@@ -54,6 +54,11 @@
     </div>
     <!-- End Top Bar -->
     
+    
+    
+    
+    
+    
     <%!
     
       ArrayList<Book> books;
@@ -105,9 +110,9 @@
     	  int quantity = bookCounts.get(book.getBookId());
     	  double price = book.getPrice();
     	  totalPrice = book.getPrice() * quantity;
-    	  cartTotal = cartTotal + book.getPrice()*quantity;
+    	  cartTotal = cartTotal + book.getPrice() * quantity;
     	  System.out.println("Cart Total "+cartTotal);
-    	  
+       
       %>
       
          			
@@ -135,7 +140,7 @@
             	<input type="hidden" name="price" value="<%=price%>"/>
             	<input type="hidden" name="cart_total" value="<%=cartTotal%>"/>
             	
-            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
+            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onchange="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
             </form>
             
             <div class="special"><a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a></div> 
