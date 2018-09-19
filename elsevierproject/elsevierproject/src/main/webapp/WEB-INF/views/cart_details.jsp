@@ -183,8 +183,8 @@
             <label for="middle-label" class="middle">Postage and Packaging: </label>
            </div>
            <div class="small-3 columns">
-           <input type="hidden" name="order_total" id="postage" value="<%=2.51%>"/>
-            <label for="middle-label" class="middle" id="postage">£<%=2.51%></label>
+           <input type="hidden" name="order_total" id="postage" value="<%=2.52%>"/>
+            <label for="middle-label" class="middle" id="postage">£<%=2.52%></label>
            </div>
            
         </div>
@@ -195,7 +195,7 @@
           </div>
           <div class="small-3 columns">
             <input type="hidden" name="order_total" id="order_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal + 2.51%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal + 2.52%></label>
            </div>
       
         </div>
