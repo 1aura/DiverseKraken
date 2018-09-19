@@ -31,14 +31,12 @@
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-          <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
-          <li><a href="/newBooksIn">New In</a></li>
-          <li><a href="/allBookDetails">All Books</a></li>
-      </ul>
-   
-    
-          
+
+          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Order History</a></li>
+         
+          </ul> 
       </div>
       
       <div class="navbar-right">
@@ -62,8 +60,8 @@
 
     <div class="callout large">
       <div class="row column text-center">
-        
-        <h3>You have logged in as <%=c.getFirstName() %></h3>
+        <h5>You've successfully changed your details</h5>
+        <h5>You have logged in as <%=c.getFirstName() %></h5>
        </div>
        
        
@@ -82,23 +80,13 @@
                 <input type="text" placeholder="Enter email" name="email" id="email" value="<%=c.getEmail()%>"/> 
                 
             </div>
-            
-          
-      		
+
       		<input type="submit" class="button create account" value="Update Account">
               
               </form>
-    
-      
-      
+
       </div>
-       
-       
-       
-       
-       
-       
-       
+ 
     </div>
     
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
@@ -118,6 +106,3 @@
     
   </body>
 </html>
-
-
-    
