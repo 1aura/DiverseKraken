@@ -7,14 +7,14 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Online Shopping</title>
+<title>New In</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
 	  <!-- Just an image -->
 
 <div class="header">
-  <a href="#default" >
+  <a href="/" >
   <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
   </a>
   </div>
@@ -61,7 +61,7 @@
 			<%
 				Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
 			%>
-			THESE ARE ALL THE NEW BOOKS...
+			Take a look at our new books...
 
 		</h2>
 		<hr>
