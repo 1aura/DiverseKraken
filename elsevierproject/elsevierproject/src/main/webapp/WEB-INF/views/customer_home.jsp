@@ -27,44 +27,45 @@
 	
 
 	<div class="header">
-		<a href="#default" class="logo"><img
-			src="/images/DiverseBooks.jpg" /></a>
-	</div>
-	<!-- Start Top Bar -->
-	<div class="navbar">
-		<div class="navbar-left">
-			<ul class="menu">
-				<li class="menu-text" style="color: black"><img
-					src="images/DiverseBooks.jpg" width="100" height="100" /></li>
-				<li><a href="/">Home</a></li>
-				<li><a href="/">Order History</li>
-			</ul>
-
-		</div>
-
-		<div class="navbar-right">
-
-			<ul class="dropdown menu" data-dropdown-menu>
-
-				<li class="has-submenu"><a href="/viewCart"><img
-						src="images/cart.jpg" width="30" height="30" /></a>
-					<ul class="submenu menu vertical" data-submenu>
-						<li><a href="/viewCart"><img src="images/cart.jpg"
-								width="50" height="50" /></a></li>
-						<li><a href="/login">Register | Login</a></li>
-					</ul></li>
-				<li><a href="html/about.html">About Us</a></li>
-				<li><a href="html/contactus.html">Contact</a></li>
-			</ul>
-
-		</div>
-	</div>
+  <a href="/"><img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/></a>
+  </div>
+    <!-- Start Top Bar -->
+    <div class="navbar">
+      <div class="navbar-left">
+        <ul class="menu">
+          <li><a href="/" >Home</a></li>
+          <li><a href="bestSellers">Bestsellers</a></li>
+          <li><a href="/newBooksIn">New In</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
+      </ul>
+   
+    
+          
+      </div>
+      
+      <div class="navbar-right">
+        
+             <ul class="dropdown menu" data-dropdown-menu>
+            
+            <li class="has-submenu">
+              <a href="/viewCart"><img src="images/shopping_cart.jpg" width="30" height="30"/></a>
+              <ul class="submenu menu vertical" data-submenu>
+                <li><a href="/viewCart"><img src="images/shopping_cart.jpg" width="50" height="50"/></a></li>
+                <li><a href="/login"> Register | Login</a></li>
+              </ul>
+            </li>
+            <li><a href="html/about.html">About Us</a></li>
+            <li><a href="html/contactus.html">Contact</a></li>
+          </ul>
+          
+      </div>
+    </div>
 	<!-- End Top Bar -->
 	<div class="callout large">
 		<div>
 			<h5>
 				You have logged in as <%=c.getFirstName()%></h5>
-				<p>You last login time:</p>
+				<p>Your last login time:</p>
 			<p id="time"></p>
 			<script>
 				var d = new Date();
