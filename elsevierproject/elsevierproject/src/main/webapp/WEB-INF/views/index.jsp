@@ -56,7 +56,7 @@
   <a class="active" href="#home"></a>
   <div class="search-container">
     <form action="/searchBooks?bookTitle">
-      <input type="text" placeholder="Search.." name="title">
+      <input type="text" placeholder="Search the title of book you are looking for" name="title">
       <button type="submit"><i class="fa fa-search"></i></button>
     </form>
   </div>
