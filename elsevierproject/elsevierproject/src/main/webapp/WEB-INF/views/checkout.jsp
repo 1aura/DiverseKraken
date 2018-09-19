@@ -18,10 +18,7 @@
     <form action="/checkoutProcess" method="post">
     
      <%
-    
     double orderTotal = (Double) request.getAttribute("order_total");
-    
-   
     %>
     
    

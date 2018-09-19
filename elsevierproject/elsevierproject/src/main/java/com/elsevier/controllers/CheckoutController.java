@@ -31,6 +31,8 @@ public class CheckoutController {
 		modelAndView.addObject("book_counts", bookCounts);
 	    return modelAndView;
 	}
+	
+	
 	@RequestMapping("/loginThroughCheckout")
 	public ModelAndView loginThroughCheckout(@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") double orderTotal)
 	{
