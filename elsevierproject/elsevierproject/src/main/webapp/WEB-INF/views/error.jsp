@@ -7,12 +7,11 @@
     <link rel="stylesheet" href="css/style.css"/> 
   </head>
 <body>
-<div class="header">
-  <a href="/"><img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/></a>
-  </div>
+
   
 <div class="divtext">
-<h1>Sorry we can't find what you're looking for</h1>
+<a href="/"><img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/></a>
+<h1>Sorry we can't find what you're looking for! </h1>
 <hr>
 <h2>Search again</h2>
 <div class="searchbar">
