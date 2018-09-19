@@ -123,10 +123,10 @@
 
           <div class="row">
           <div class="small-3 columns">
-            <label for="middle-label" class="middle">VAT </label>
+            <label for="middle-label" class="middle">Postage and Packaging </label>
           </div>
           <div class="small-3 columns">
-            <label for="middle-label" class="middle">Applicable Tax </label>
+            <label for="middle-label" class="middle">£2.50</label>
            </div>
            
         </div>
