@@ -13,7 +13,7 @@
    <!-- Just an image -->
 
 <div class="header">
-  <a href="#default" >
+  <a href="/" >
   <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
   </a>
   </div>
