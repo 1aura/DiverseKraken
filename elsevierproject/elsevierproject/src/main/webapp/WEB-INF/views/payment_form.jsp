@@ -27,7 +27,7 @@
   
 
     <%
-        
+    System.err.println(request.getAttribute("order_total"));
     double orderTotal = (Double) request.getAttribute("order_total");
     
     %>
