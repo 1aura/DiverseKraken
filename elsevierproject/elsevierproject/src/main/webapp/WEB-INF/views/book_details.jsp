@@ -86,7 +86,7 @@
 	<div class="row">
 		<div class="medium-6 columns">
 			<img class="thumbnail" src="<%=book.getBookImage()%>" />
-			<div class="row small-up-4">
+			
 				<div class="column">
 					ISBN:
 					<%=book.getPaperISBN()%>
@@ -99,7 +99,7 @@
 					<%=book.getPublishedDate()%>
 				</div>
 
-			</div>
+			
 		</div>
 		<div class="medium-6 large-5 columns">
 			<h3><%=book.getTitle() %></h3>
