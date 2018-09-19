@@ -89,8 +89,8 @@ if (b == "") {
             
             <div class="medium-6">
            
-          	 <input type="checkbox" name="aggreement"/> I have read and understood the 
-          	 <a href="/registered_user_agreement" color="black">Registered User Agreement </a> and agree to be bound by all of its terms. 
+          	 <input type="checkbox" name="aggreement"/> I have read and understood the Registered User Agreement
+          	 <!-- <a href="/registered_user_agreement" color="black">Registered User Agreement </a> --> and agree to be bound by all of its terms. 
          
             </div>
       		
