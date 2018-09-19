@@ -144,35 +144,39 @@
 				<h4>Reviews</h4>
 				<div class="media-object stack-for-small">
 					<div class="media-object-section">
-						<img class="thumbnail" src="http://placehold.it/200x200">
+						<img class="thumbnail" src="http://img.timeinc.net/time/daily/2012/1211/poy_benbernanke.jpg" width=400>
 					</div>
 					<div class="media-object-section">
-						<h5>Mike Stevenson</h5>
-						<p>RENDER REVIEWS HERE</p>
-					</div>
-				</div>
-				<div class="media-object stack-for-small">
-					<div class="media-object-section">
-						<img class="thumbnail" src="http://placehold.it/200x200">
-					</div>
-					<div class="media-object-section">
-						<h5>Mike Stevenson</h5>
-						<p>I'm going to improvise. Listen, there's something you
-							should know about me... about inception. An idea is like a virus,
-							resilient, highly contagious. The smallest seed of an idea can
-							grow. It can grow to define or destroy you</p>
+						<h5>Caterina Fowler</h5>
+						<p>I never really leave reviews but this one needs it! Just read it, 
+						you won't regret it. </p>
 					</div>
 				</div>
 				<div class="media-object stack-for-small">
 					<div class="media-object-section">
-						<img class="thumbnail" src="http://placehold.it/200x200">
+						<img class="thumbnail" src="https://assets.time.com/assets/desktop-loop-poster.jpg" width=400>
 					</div>
 					<div class="media-object-section">
-						<h5>Mike Stevenson</h5>
-						<p>I'm going to improvise. Listen, there's something you
-							should know about me... about inception. An idea is like a virus,
-							resilient, highly contagious. The smallest seed of an idea can
-							grow. It can grow to define or destroy you</p>
+						<h5>Nick Bryant</h5>
+						<p>I wonder how many journalists have arrived in Washington 
+						over the years dreaming of becoming the next Bob Woodward... 
+						Though his books are often sensational, he is the opposite of 
+						sensationalist. He's diligent, rigorous, fastidious about the 
+						facts, and studiously ethical. There's something almost monastic
+						 about his method . . . He's Washington's chronicler in chief.</p>
+					</div>
+				</div>
+				<div class="media-object stack-for-small">
+					<div class="media-object-section">
+						<img class="thumbnail" src="https://www.alvinailey.org/sites/default/files/styles/slideshow_image/public/melanie-person.jpg?itok=ocw3xkx_" width=400>
+					</div>
+					<div class="media-object-section">
+						<h5>Amelia Ducane</h5>
+						<p>This book changed my life! I wouldn't be here without it, literally. 
+						I would have got lost on my way to greatness for sure, don't ask me why!
+						The structure of the book was slightly confusing, I mean who flips pages upside down
+						in the middle of the book?!? But aside from that I thought it was an impressive 
+						piece of work and I would recommend it to a friend, or maybe an enemy, I just love books.</p>
 					</div>
 				</div>
 				<label> My Review <textarea placeholder="None"></textarea>
