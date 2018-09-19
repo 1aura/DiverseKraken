@@ -62,23 +62,9 @@
   </div>
 </div>
 
-<div class="fadein">
-  <img src="Harrypotter.jpg">
-  <img src="Joes30minutemeals.jpg">
-  <img src="crazyrichasains.jpg">
+<div class="figure">
+<img src="images/home_wrap.jpg" width=100%/>
 </div>
-
-<script type="text/jQuery"> 
-$(function(){
-    $('.fadein img:gt(0)').hide();
-    setInterval(function(){
-      $('.fadein :first-child').fadeOut()
-         .next('img').fadeIn()
-         .end().appendTo('.fadein');}, 
-      3000);
-});
-</script>
-
     
     <div class="row column text-center">
       <h2>
