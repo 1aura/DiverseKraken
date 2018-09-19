@@ -7,7 +7,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping</title>
+    <title>Bestsellers|Diverse Books</title>
     <link rel="stylesheet" href="css/style.css"/>
   </head>
   <body>
@@ -61,7 +61,7 @@
       Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
           
       %>
-      THESE ARE THE BESTSELLERS...
+      The bestselling books of the month are all here!
       <hr>
       </h2>
       
