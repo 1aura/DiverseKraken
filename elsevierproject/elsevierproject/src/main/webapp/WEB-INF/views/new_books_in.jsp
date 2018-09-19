@@ -23,7 +23,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -57,7 +57,7 @@
 
 		<h2>
 
-
+			<hr>
 			<%
 				Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
 			%>
@@ -78,7 +78,7 @@
 				class="thumbnail" src="<%=book.getBookImage()%>"></a>
 			<h5><%=book.getTitle()%></h5>
 			<p>
-				$<%=book.getPrice()%></p>
+				£<%=book.getPrice()%></p>
 			<a href="/bookDetails?bookId=<%=book.getBookId()%>"
 				class="button expanded">View book details</a> <a
 				href="/addToCart?bookId=" class="button expanded">Add to Cart</a>

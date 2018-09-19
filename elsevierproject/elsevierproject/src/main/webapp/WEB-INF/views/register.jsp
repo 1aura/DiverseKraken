@@ -20,7 +20,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -90,7 +90,7 @@ if (b == "") {
             <div class="medium-6">
            
           	 <input type="checkbox" name="aggreement"/> I have read and understood the 
-          	 <a href="/registered_user_agreement">Registered User Agreement </a> and agree to be bound by all of its terms. 
+          	 <a href="/registered_user_agreement" color="black">Registered User Agreement </a> and agree to be bound by all of its terms. 
          
             </div>
       		

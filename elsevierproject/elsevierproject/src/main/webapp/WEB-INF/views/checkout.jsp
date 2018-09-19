@@ -38,7 +38,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -198,7 +198,7 @@
           </div>
           <div class="small-3 columns">
              
-            <label for="middle-label" class="middle" id="cart_total_label">$<%=orderTotal %></label>
+            <label for="middle-label" class="middle" id="cart_total_label">£<%=orderTotal %></label>
            </div>
            
        </div>
@@ -224,7 +224,7 @@
           </div>
           <div class="small-3 columns">
           
-            <label for="middle-label" class="middle" id="order_total_label">$<%=orderTotal+2.51%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=orderTotal+2.51%></label>
            </div>
       
         </div>

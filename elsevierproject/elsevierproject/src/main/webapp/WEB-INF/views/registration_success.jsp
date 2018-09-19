@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -20,7 +21,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -51,6 +52,8 @@
     <div class="callout large">
       <div class="row column text-center">
         <h1>Registration Success </h1>
+        
+     
         
         <a href="/login" class="button large"> Click here to login </a>
       

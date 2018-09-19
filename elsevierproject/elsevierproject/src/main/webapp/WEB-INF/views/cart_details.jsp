@@ -11,10 +11,11 @@
     <title>Shopping Cart | Welcome </title>
     <link rel="stylesheet" href="css/style.css">
     
-    
+   
   </head>
   <body>
     <!-- Just an image -->
+
 
 <div class="header">
   <a href="#default" >
@@ -26,7 +27,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -53,6 +54,11 @@
       </div>
     </div>
     <!-- End Top Bar -->
+    
+    
+    
+    
+    
     
     <%!
     
@@ -105,9 +111,9 @@
     	  int quantity = bookCounts.get(book.getBookId());
     	  double price = book.getPrice();
     	  totalPrice = book.getPrice() * quantity;
-    	  cartTotal = cartTotal + book.getPrice()*quantity;
+    	  cartTotal = cartTotal + book.getPrice() * quantity;
     	  System.out.println("Cart Total "+cartTotal);
-    	  
+       
       %>
       
          			
@@ -135,7 +141,7 @@
             	<input type="hidden" name="price" value="<%=price%>"/>
             	<input type="hidden" name="cart_total" value="<%=cartTotal%>"/>
             	
-            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onclick="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
+            	Quantity <input type="number"  min="1" name="quantity" value="<%=quantity%>" onchange="calculateTotalPrice(price.value,this.value,price_label<%=i%>)"/>
             </form>
             
             <div class="special"><a href="/removeFromCart?bookId=<%=book.getBookId() %>"> Remove </a></div> 
@@ -178,8 +184,8 @@
             <label for="middle-label" class="middle">Postage and Packaging: </label>
            </div>
            <div class="small-3 columns">
-           <input type="hidden" name="order_total" id="postage" value="<%=2.51%>"/>
-            <label for="middle-label" class="middle" id="postage">£<%=2.51%></label>
+           <input type="hidden" name="order_total" id="postage"/>
+            <label for="middle-label" class="middle" id="newpostage"></label>
            </div>
            
         </div>
@@ -190,7 +196,7 @@
           </div>
           <div class="small-3 columns">
             <input type="hidden" name="order_total" id="order_total" value="<%=cartTotal %>"/> 
-            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal + 2.51%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=cartTotal + 2.50%></label>
            </div>
       
         </div>
@@ -215,8 +221,15 @@
     <script>
       $(document).foundation();
     </script> 
+    
+    <!-- START FORMATTING PP -->
+    <script>
+   var pp = 2.50;
+   var rpp = "£"+pp.toFixed(2);
+   document.getElementById('newpostage').innerHTML = rpp;
+    </script>
+        <!-- END FORMATTING PP -->
+    
+    
   </body>
 </html>
-
-
-    

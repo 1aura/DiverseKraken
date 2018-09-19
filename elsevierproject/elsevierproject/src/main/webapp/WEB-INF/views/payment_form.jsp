@@ -12,7 +12,6 @@
 
 
 
-%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,25 +23,15 @@
   </head>
   <body>
     
-    <form action="/checkoutProcess" method="post">
-    
-   <!-- START STRIPE TESTING ALSO ADDED IMPORTS AT THE TOP -->
+    <form action="/" method="post">
+  
+
     <%
-    
-    
- 		
-		
-    
+        
     double orderTotal = (Double) request.getAttribute("order_total");
     
-   
     %>
     
-    
-		 
-		
-  <!-- END STRIP TESTING ************************* -->
-
    <!-- Just an image -->
 
 <div class="header">
@@ -55,7 +44,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -97,10 +86,12 @@
     </div>
 
     <div class="row">
- <h2> Your payment has been processed.</h2>
+ 
       <div class="medium-6 columns">
-
-          
+    <h2></h2>
+        <div class="row small-up-shiping">
+          <div class="columns"></div>
+ <!--          <div class="columns"></div>--> 
         </div>
         
         <div class="row small-up-4">
@@ -111,10 +102,10 @@
         
         </div>
         
-        <hr>
-        
-      
-         <h3>Order Summary </h3>
+              
+      </div>
+      <div class="medium-6 large-5 columns">
+        <h3>Order Summary </h3>
         <p> </p>
 
         <div class="row">
@@ -123,7 +114,7 @@
           </div>
           <div class="small-3 columns">
              
-            <label for="middle-label" class="middle" id="cart_total_label">$<%=orderTotal %></label>
+            <label for="middle-label" class="middle" id="cart_total_label">£<%=orderTotal %></label>
            </div>
            
        </div>
@@ -139,9 +130,6 @@
            </div>
            
         </div>
-        
-        
-        
     
         <div class="row">
           <div class="small-3 columns">
@@ -149,24 +137,24 @@
           </div>
           <div class="small-3 columns">
           
-            <label for="middle-label" class="middle" id="order_total_label">$<%=orderTotal%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=orderTotal%></label>
            </div>
       
         </div>
 
 		  
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
-        
-        
-              
-    
+        <input type="submit" class="button large expanded" value="Continue Shopping"/>
+
+      </div>  
+      
       <!-- Footer -->
   <div class="footer">
 <h3><img src="images/DiverseBooks.jpg" width="100" height="100"/> Diverse Books </h3>
 	<p>This website is proudly brought to you by Team Diversity. &copy; 2018 Team Diversity</p>
 </div>
    
-
+ </div>
     <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
     <script src="js/elsevier.js"></script>
     <script src="js/update_cart.js"></script>
