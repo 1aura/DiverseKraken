@@ -248,9 +248,7 @@
         // have more than 1 button of that class
         document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
     </script>
-    <!--  <button type="submit" class="yourCustomClass">Buy my things</button>-->
 
-        
         <input type="submit" class="button large expanded" value="Checkout"/>
        
       </div>  
