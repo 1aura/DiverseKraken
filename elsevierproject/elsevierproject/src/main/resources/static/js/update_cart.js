@@ -27,7 +27,6 @@ function calculateTotalPrice(price,quantity,price_label)
 	       document.getElementById("cart_total").value = cTotal;
 	       document.getElementById("order_total").value = oTotal;
 	       
-	       var decs = parseFloat(cartTotal);
 	       
 	       alert("Cart Total is "+cartTotal);
 	       alert("Order Total is "+orderTotal);

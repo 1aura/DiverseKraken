@@ -140,6 +140,17 @@
             <input type="checkbox" name="same" id="same"/> My billing and shipping address are the same
           </div>
           
+           <script
+		    src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+		    data-key="pk_test_eFI25UMD5O7O9cJln9RlbDO5"
+		    data-amount="999"
+		    data-name="Demo Site"
+		    data-description="Example charge"
+		    data-image="https://stripe.com/img/documentation/checkout/marketplace.png"
+		    data-locale="auto"
+		    data-currency="gbp">
+		  </script>
+          
         </div>
         
         <div class="row small-up-4">
@@ -249,6 +260,9 @@
            </div>
            
         </div>
+        
+        
+        
     
         <div class="row">
           <div class="small-3 columns">
@@ -266,6 +280,13 @@
         <input type="submit" class="button large expanded" value="Checkout"/>
        
       </div>  
+      
+      
+      
+      
+      
+      
+      
       
        <!-- Footer -->
   <div class="footer">

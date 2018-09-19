@@ -4,11 +4,20 @@
 <%@page import="java.util.HashMap"%>
 <%@page import="java.util.ArrayList"%>
 <%@page import="com.elsevier.models.Book"%>
+<%@page import="com.elsevier.models.Shipping"%>
+<%@page import="com.stripe.Stripe"%>
+<%@page import="com.stripe.exception.StripeException"%>
+<%@page import="com.stripe.model.Charge"%>
+
+
+
+
+%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart | Week 3</title>
+    <title>Shopping Cart </title>
     <link rel="stylesheet" href="css/style.css">
     
     
@@ -17,15 +26,22 @@
     
     <form action="/checkoutProcess" method="post">
     
-    
+   <!-- START STRIPE TESTING ALSO ADDED IMPORTS AT THE TOP -->
     <%
+    
+    
+ 		
+		
     
     double orderTotal = (Double) request.getAttribute("order_total");
     
    
     %>
     
-   
+    
+		 
+		
+  <!-- END STRIP TESTING ************************* -->
 
    <!-- Just an image -->
 

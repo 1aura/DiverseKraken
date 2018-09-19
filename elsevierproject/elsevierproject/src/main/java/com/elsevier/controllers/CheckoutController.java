@@ -2,6 +2,7 @@ package com.elsevier.controllers;
 
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
 
+import java.util.HashMap;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
@@ -12,13 +13,16 @@ import org.springframework.web.bind.annotation.SessionAttributes;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.elsevier.models.Shipping;
+import com.stripe.Stripe;
+import com.stripe.exception.StripeException;
+import com.stripe.model.Charge;
 
 @SessionAttributes(names={"book_counts"})
 @Controller
 public class CheckoutController {
 
 	@RequestMapping("/checkoutProcess")
-	public ModelAndView checkoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") double orderTotal)
+	public ModelAndView checkoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") double orderTotal) throws StripeException
 	{
 		System.out.println("First name "+shipping.getFirstName());
 		ModelAndView modelAndView = new ModelAndView("payment_form","order_total",orderTotal);

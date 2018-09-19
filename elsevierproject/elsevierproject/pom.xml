@@ -56,7 +56,11 @@
 		    <artifactId>tomcat-embed-jasper</artifactId>
 		</dependency>
 		
-		
+		<dependency>
+  <groupId>com.stripe</groupId>
+  <artifactId>stripe-java</artifactId>
+  <version>6.5.0</version>
+</dependency>
 	
 	</dependencies>
 
