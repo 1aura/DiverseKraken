@@ -210,8 +210,8 @@
             <label for="middle-label" class="middle">Postage and Packaging: </label>
            </div>
            <div class="small-3 columns">
-           <input type="hidden" name="order_total" id="postage" value="<%=2.51%>"/>
-            <label for="middle-label" class="middle" id="postage">£<%=2.51%></label>
+           <input type="hidden" name="order_total" id="postage"/>
+            <label for="middle-label" class="middle" id="newpostage"></label>
            </div>
            
         </div>
@@ -224,8 +224,8 @@
           </div>
           <div class="small-3 columns">
           
-            <label for="middle-label" class="middle" id="order_total_label">£<%=orderTotal+2.51%></label>
-           </div>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=orderTotal+2.50%></label>
+        </div>
       
         </div>
 
@@ -236,7 +236,7 @@
               
     <script   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		    data-key="pk_test_eFI25UMD5O7O9cJln9RlbDO5"
-		    data-amount="<%=(orderTotal + 2.51 )* 100%>"
+		    data-amount="<%=(orderTotal + 2.50 )* 100%>"
 		    data-name="Diversity Books"
 		    data-description="Book Order"
 		    data-image="https://st2.depositphotos.com/3102403/7923/v/950/depositphotos_79232506-stock-illustration-flat-books-with-bookmarks-circle.jpg"
@@ -277,8 +277,17 @@
     <script>
       $(document).foundation();
     </script> 
+    </form>
     
-   </form>
+      <!-- START FORMATTING MONEY -->
+    <script>
+   var pp = 2.50;
+   var rpp = "£"+pp.toFixed(2);
+   document.getElementById('newpostage').innerHTML = rpp;
+   
+  </script>
+        <!-- END FORMATTING MONEY -->
+    
   </body>
 </html>
 
