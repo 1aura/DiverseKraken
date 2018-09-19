@@ -1,4 +1,5 @@
 <!doctype html>
+
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -51,6 +52,8 @@
     <div class="callout large">
       <div class="row column text-center">
         <h1>Registration Success </h1>
+        
+     
         
         <a href="/login" class="button large"> Click here to login </a>
       

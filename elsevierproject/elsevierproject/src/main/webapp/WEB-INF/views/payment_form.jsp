@@ -114,7 +114,7 @@
           </div>
           <div class="small-3 columns">
              
-            <label for="middle-label" class="middle" id="cart_total_label">$<%=orderTotal %></label>
+            <label for="middle-label" class="middle" id="cart_total_label">£<%=orderTotal %></label>
            </div>
            
        </div>
@@ -137,7 +137,7 @@
           </div>
           <div class="small-3 columns">
           
-            <label for="middle-label" class="middle" id="order_total_label">$<%=orderTotal%></label>
+            <label for="middle-label" class="middle" id="order_total_label">£<%=orderTotal%></label>
            </div>
       
         </div>

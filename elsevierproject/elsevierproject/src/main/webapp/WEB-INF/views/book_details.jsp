@@ -4,7 +4,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Book details | Welcome</title>
+<title>Book details </title>
 <link rel="stylesheet" href="css/style.css">
 
 
@@ -86,7 +86,7 @@
 	<div class="row">
 		<div class="medium-6 columns">
 			<img class="thumbnail" src="<%=book.getBookImage()%>" />
-			<div class="row small-up-4">
+			
 				<div class="column">
 					ISBN:
 					<%=book.getPaperISBN()%>
@@ -99,7 +99,7 @@
 					<%=book.getPublishedDate()%>
 				</div>
 
-			</div>
+			
 		</div>
 		<div class="medium-6 large-5 columns">
 			<h3><%=book.getTitle() %></h3>
@@ -127,7 +127,7 @@
 
 			<div class="small secondary expanded button-group">
 				<a class="button">Facebook</a> <a class="button">Twitter</a> <a
-					class="button">Yo</a>
+					class="button">Instagram</a>
 			</div>
 		</div>
 	</div>
@@ -184,7 +184,7 @@
 					<div class="column">
 						<img class="thumbnail" src="http://placehold.it/350x200">
 						<h5>
-							Other Product <small>$22</small>
+							Other Product <small>£22</small>
 						</h5>
 						<p>In condimentum facilisis porta. Sed nec diam eu diam mattis
 							viverra. Nulla fringilla, orci ac euismod semper, magna diam.</p>
@@ -237,7 +237,7 @@
 			<li><a href="/">Home</a></li>
 			<li><a href="#">About</a></li>
 			<li><a href="#">Contact</a></li>
-			<li class="float-right">Copyright 2017</li>
+			<li class="float-right">Copyright 2018</li>
 		</ul>
 	</div>
 
