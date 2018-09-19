@@ -8,7 +8,7 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart | Week 3</title>
+    <title>Shopping Cart</title>
     <link rel="stylesheet" href="css/style.css">
     
     
@@ -83,16 +83,16 @@
  
       <div class="medium-6 columns">
       
-       <h2> Shipping Address </h2>
+       <h2> Shipping Details </h2>
         
         <div class="row small-up-shiping">
         
           <div class="columns">
-            <label> Firstname * </label>
+            <label> First name * </label>
             <input type="text" name="firstName" id="firstName" size="30"/> 
           </div>
           <div class="columns">
-             <label> Lastname * </label>
+             <label> Last name * </label>
             <input type="text" name="lastName" id="lastName" size="30"/>
           </div>
           
@@ -168,7 +168,7 @@
         <div class="login_in_shipping">
     
       
-           <h3>Checkout using account: </h3>
+           <h3>Checkout using account </h3>
         <p> Please login using saved details</p>
 
         <div class="row">
@@ -205,16 +205,16 @@
 
 
 
-          <div class="row">
+         <div class="row">
           <div class="small-3 columns">
-            <label for="middle-label" class="middle">VAT </label>
-          </div>
-          <div class="small-3 columns">
-            <label for="middle-label" class="middle">Applicable Tax </label>
+            <label for="middle-label" class="middle">Postage and Packaging: </label>
+           </div>
+           <div class="small-3 columns">
+           <input type="hidden" name="order_total" id="postage" value="<%=2.51%>"/>
+            <label for="middle-label" class="middle" id="postage">£<%=2.51%></label>
            </div>
            
         </div>
-        
         
         
     
@@ -224,7 +224,7 @@
           </div>
           <div class="small-3 columns">
           
-            <label for="middle-label" class="middle" id="order_total_label">$<%=orderTotal%></label>
+            <label for="middle-label" class="middle" id="order_total_label">$<%=orderTotal+2.51%></label>
            </div>
       
         </div>
@@ -236,7 +236,7 @@
               
     <script   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		    data-key="pk_test_eFI25UMD5O7O9cJln9RlbDO5"
-		    data-amount="999"
+		    data-amount="<%=(orderTotal + 2.51 )* 100%>"
 		    data-name="Diversity Books"
 		    data-description="Book Order"
 		    data-image="https://st2.depositphotos.com/3102403/7923/v/950/depositphotos_79232506-stock-illustration-flat-books-with-bookmarks-circle.jpg"
@@ -248,9 +248,7 @@
         // have more than 1 button of that class
         document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
     </script>
-    <!--  <button type="submit" class="yourCustomClass">Buy my things</button>-->
 
-        
         <input type="submit" class="button large expanded" value="Checkout"/>
        
       </div>  
