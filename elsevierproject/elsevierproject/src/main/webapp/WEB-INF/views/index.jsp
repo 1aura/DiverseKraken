@@ -8,16 +8,14 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping</title>
+    <title>Diverse Books</title>
     <link rel="stylesheet" href="css/style.css"/> 
   </head>
   <body>
   <!-- Just an image -->
 
 <div class="header">
-  <a href="#default" >
-  <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
-  </a>
+  <a href="/"><img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/></a>
   </div>
     <!-- Start Top Bar -->
     <div class="navbar">
