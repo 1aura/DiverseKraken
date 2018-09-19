@@ -1390,6 +1390,14 @@ a img {
 	margin-reight:25%;
 
 }
+.divtext {
+	text-align:center;
+	position: absolute;
+}
+
+.divtext button:hover {
+	color:#11a0a3
+}
 
 hr {
     box-sizing: content-box;

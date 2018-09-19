@@ -25,7 +25,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -58,6 +58,7 @@
     <div class="row column text-center">
     
       <h2>
+      <hr>
     Browse all books in stock here 
       
       <%
