@@ -88,16 +88,14 @@ var text = document.getElementById("text");
 input.addEventListener("keyup", function(event) {
 
 if (event.getModifierState("CapsLock")) {
-    text.style.display = "block";
-  } else {
-    text.style.display = "none"
-  }
+   text.style.display = "block";
+ } else {
+   text.style.display = "none"
+ }
 });
 </script>
 
-     
-              
-              </form>
+            </form>
             </div>
       
       <div class="halves last">
