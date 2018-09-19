@@ -58,6 +58,7 @@
     <div class="row column text-center">
     
       <h2>
+      <hr>
     Browse all books in stock here 
       
       <%

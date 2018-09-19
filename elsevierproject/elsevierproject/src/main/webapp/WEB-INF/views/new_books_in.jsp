@@ -57,7 +57,7 @@
 
 		<h2>
 
-
+			<hr>
 			<%
 				Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
 			%>

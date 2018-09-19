@@ -56,15 +56,15 @@
     <div class="row column text-center">
     
       <h2>
-      
+      <hr>
       <%
       Iterable<Book> books = (Iterable<Book>) session.getAttribute("books");
           
       %>
       THESE ARE THE BESTSELLERS...
-      
-      </h2>
       <hr>
+      </h2>
+      
     </div>
 
     <div class="row small-up-2 large-up-4">
