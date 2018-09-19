@@ -6,7 +6,7 @@ function calculateTotalPrice(price,quantity,price_label)
 	       var cartTotal = document.getElementById("cart_total").value;
 	       var orderTotal = document.getElementById("order_total").value;
 	       //var totalPrice = document.getElementById("price_label").value;
-	       
+	       var postage = document.getElementById("postage").value;
 	       
 	       var totalPrice = parseFloat(price) * parseFloat(quantity);
 	       var update = totalPrice - parseFloat(price);
@@ -15,13 +15,13 @@ function calculateTotalPrice(price,quantity,price_label)
 	       
 	       cTotal  = parseFloat(cartTotal) + parseFloat(update);
 	       
-	       oTotal = parseFloat(orderTotal) + parseFloat(update);
+	       oTotal = parseFloat(orderTotal) + parseFloat(update) + parseFloat(postage);
 	       
 	       document.getElementById("cart_total_label").innerHTML = "£"+cTotal;
 	       
 	       document.getElementById("order_total_label").innerHTML = "£"+oTotal;
 	       
-	       document.getElementById("price").value = totalPrice;
+	       document.getElementById("price").value = "£" + totalPrice;
 	       
 	       
 	       document.getElementById("cart_total").value = cTotal;

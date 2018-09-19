@@ -12,7 +12,6 @@
 
 
 
-%>
 <html class="no-js" lang="en">
   <head>
     <meta charset="utf-8" />
@@ -24,25 +23,15 @@
   </head>
   <body>
     
-    <form action="/checkoutProcess" method="post">
-    
-   <!-- START STRIPE TESTING ALSO ADDED IMPORTS AT THE TOP -->
+    <form action="/" method="post">
+  
+
     <%
-    
-    
- 		
-		
-    
+        
     double orderTotal = (Double) request.getAttribute("order_total");
     
-   
     %>
     
-    
-		 
-		
-  <!-- END STRIP TESTING ************************* -->
-
    <!-- Just an image -->
 
 <div class="header">
@@ -55,7 +44,7 @@
       <div class="navbar-left">
         <ul class="menu">
           <li><a href="/" >Home</a></li>
-          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
           <li><a href="/allBookDetails">All Books</a></li>
       </ul>
@@ -90,7 +79,7 @@
          
           <li><a href="/">Home</a></li>
           <li>
-            <span class="show-for-sr">Current: </span> Payment Details
+            <span class="show-for-sr">Current: </span> Payment Processed
           </li>
         </ul>
       </nav>
@@ -99,64 +88,10 @@
     <div class="row">
  
       <div class="medium-6 columns">
-      
-       <h2> Payment Details  </h2>
-        
+    <h2></h2>
         <div class="row small-up-shiping">
-        
-          <div class="columns">
-            <label> Firstname * </label>
-            <input type="text" name="firstName" id="firstName" size="30"/> 
-          </div>
-          <div class="columns">
-             <label> Lastname * </label>
-            <input type="text" name="lastName" id="lastName" size="30"/>
-          </div>
-          
-          <div class="column">
-           <label> Address 1 * </label>
-            <input type="text" name="addressLine1" id="addressLine1" size="30"/>
-          </div>
-          <div class="column">
-            <label> Address 2 * </label>
-            <input type="text" name="addressLine2" id="addressLine2" size="30"/>
-          </div>
-          <div class="column">
-            <label> City * </label>
-            <input type="text" name="city" id="city" size="30"/>
-          </div>
-          
-       <div class="column">
-            <label> Postcode / Zip code * </label>
-            <input type="text" name="postcode" id="postcode" size="30"/>
-          </div>
-          
-          <div class="column">
-            <label> State/Province * </label>
-            <input type="text" name="state" id="state" size="30"/>
-          </div>
-          
-    <div class="column">
-            <label> Country</label>
-            <input type="text" name="country" id="country" size="30"/>
-          </div>
-          
-           <div class="column">
-            <label> Phone Number</label>
-            <input type="text" name="phone" id="phone" size="30"/>
-          </div>
-          
-          
-           <div class="column">
-            <label> Email * </label>
-            <input type="text" name="email" id="email" size="30"/>
-          </div>
-          
-          
-          <div class="column">
-            <input type="checkbox" name="same" id="same"/> My billing and shipping address are the same
-          </div> -->
-          
+          <div class="columns"></div>
+ <!--          <div class="columns"></div>--> 
         </div>
         
         <div class="row small-up-4">
@@ -167,8 +102,7 @@
         
         </div>
         
-        <hr>
-      
+              
       </div>
       <div class="medium-6 large-5 columns">
         <h3>Order Summary </h3>
@@ -210,7 +144,7 @@
 
 		  
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
-        <input type="submit" class="button large expanded" value="Checkout"/>
+        <input type="submit" class="button large expanded" value="Continue Shopping"/>
 
       </div>  
       

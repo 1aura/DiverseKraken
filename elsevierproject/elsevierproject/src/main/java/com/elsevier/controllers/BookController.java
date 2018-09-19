@@ -138,6 +138,7 @@ public class BookController {
 	    ModelAndView modelAndView = new ModelAndView("bestsellers");
 	    return modelAndView;
 	}
+	
 
 	
 	public ArrayList<Integer> loadBookIds(ArrayList<Book> cartItems)

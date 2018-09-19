@@ -3,12 +3,116 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Online Shopping </title>
+    <title>Contact Us</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+    body {
+    	font-family: "Lucida Sans Unicode", Georgia,  Roboto, Arial, sans-serif;
+    }
+    
+    * {
+    	box-sizing: border-box;
+    }
+    
+    input[type=text], select, textarea {
+    	width: 100%;
+    	padding: 12px;
+    	border: 1px solid #ccc;
+    	margin-top: 6px;
+    	margin-bottom: 16px;
+    	resize: vertical;
+    }
+    
+    input[type=submit] {
+    	background-color: black;
+    	color: white;
+    	padding: 12px 20px;
+    	border: none;
+    	cursor: pointer;
+    }
+    
+    input[type=submit]:hover {
+    	background-color: #4d79ff;
+    }
+    
+    .container {
+    	border-radius: 5px;
+    	background-color: #e6ecff;
+    	padding: 10px;
+    }
+    
+    .column {
+    	float: left;
+    	width: 50%;
+    	margin-top: 6px;
+    	padding: 20px;
+    }
+    
+    .row:after {
+    	content: "";
+    	display: table;
+    	clear: both;
+    }
+    
+    @media screen and (max-width:600px) {
+    	.column, input[type=submit] {
+    		width: 100%;
+    		margin-top: 0;
+    	}
+    }
+    .hero-text button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 10px 25px;
+  color: white;
+  background-color: transparent;
+  text-align: center;
+  cursor: pointer;
+}
+
+.hero-text button:hover {
+  background-color: white;
+  color: black;
+}
+    </style>
   </head>
   <body>
     
-   <p>A static page should be created for the "Contact Us" Here </p>
+<div class="container">
+  <div style="text-align:center">
+    <h2>Contact Us</h2>
+    <p>Let us know what you think!</p>
+  </div>
+  <div class="row">
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname"><strong>First Name</strong></label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname"><strong>Last Name</strong></label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+        <label for="country"><strong>Country</strong></label>
+        <select id="country" name="country">
+          <option value="uk">UK</option>
+          <option value="canada">Canada</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject"><strong>Subject</strong></label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+    <div class="column">
+    <label> <strong>Address details:</strong> </label>
+    <p> Diverse Books Ltd, The Boulevard, Langford Lane, Kidlington OX5 1GB, UK </p>
+    <label> <strong>Telephone:</strong> </label> 
+    <p> 01865 123123 </p>
+    <label> <strong>Email:</strong> </label>
+    <p> customerservices@diversebooks.com </p>
+    <a href="/"><button><img src="/images/home.jpg" width=30 height=30/></button></a>
+    </div>
+  </div>
+</div>
 
 
   
