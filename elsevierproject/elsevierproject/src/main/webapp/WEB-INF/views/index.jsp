@@ -9,8 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Online Shopping</title>
-    <link rel="stylesheet" href="css/style.css"/>
-    <link href="http://cdnjs.cloudflare.com/ajax/libs/fotorama/4.6.4/fotorama.css" rel="stylesheet"/> 
+    <link rel="stylesheet" href="css/style.css"/> 
   </head>
   <body>
   <!-- Just an image -->

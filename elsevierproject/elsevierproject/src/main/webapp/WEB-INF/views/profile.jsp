@@ -20,17 +20,24 @@
  		c = (Customer) session.getAttribute("logged_in_customer");
   %>
     
-    <!-- Just an image -->
+      <!-- Just an image -->
 
 <div class="header">
-  <a href="#default" class="logo"><img src="/images/DiverseBooks.jpg"/></a>
+  <a href="#default" >
+  <img  class="img" src="/images/DiverseBooks.jpg" alt="DiverseBooks" width=400/>
+  </a>
   </div>
     <!-- Start Top Bar -->
     <div class="navbar">
       <div class="navbar-left">
         <ul class="menu">
-          <li class="menu-text" style="color:black"><img src="images/DiverseBooks.jpg" width="100" height="100"/> </li>
-          <li><a href="/">Home</a></li>
+          <li><a href="/" >Home</a></li>
+          <li><a href="/BLAHAA">Bestsellers</a></li>
+          <li><a href="/newBooksIn">New In</a></li>
+          <li><a href="/allBookDetails">All Books</a></li>
+      </ul>
+   
+    
           
       </div>
       
@@ -42,7 +49,7 @@
               <a href="/viewCart"><img src="images/cart.jpg" width="30" height="30"/></a>
               <ul class="submenu menu vertical" data-submenu>
                 <li><a href="/viewCart"><img src="images/cart.jpg" width="50" height="50"/></a></li>
-                <li><a href="/login">Register | Login</a></li>
+                <li><a href="/login"> Register | Login</a></li>
               </ul>
             </li>
             <li><a href="html/about.html">About Us</a></li>
