@@ -89,12 +89,12 @@ if (b == "") {
             
             <div class="medium-6">
            
-          	 <input type="checkbox" name="aggreement"/> I have read and understood the Registered User Agreement
+          	 <input type="checkbox" name="checkbox" value="check"/> I have read and understood the Registered User Agreement
           	 <!-- <a href="/registered_user_agreement" color="black">Registered User Agreement </a> --> and agree to be bound by all of its terms. 
-         
+         	
             </div>
       		
-      		<input type="submit" class="button create account" value="Create Account">
+      		<input type="submit" class="button create account" value="Create Account" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}">
               
               </form>
     
