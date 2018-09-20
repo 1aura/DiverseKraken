@@ -28,7 +28,15 @@
 
     <%
     System.err.println(request.getAttribute("order_total"));
-    double orderTotal = (Double) request.getAttribute("order_total");
+    //There was a comma being stored for this value when going
+    //from the checkout page to the payment processed page.
+    //E.g. order_total = ,2.99 not 2.99
+    //So it was passed to this as a string from 
+    //public ModelAndView checkoutProcess
+    //and stripped here - Monica
+    String orderTotalString = (String) request.getAttribute("order_total");
+    orderTotalString = orderTotalString.substring(1);
+    double orderTotal = Double.parseDouble(orderTotalString);
     
     %>
     
@@ -88,7 +96,7 @@
     <div class="row">
  
       <div class="medium-6 columns">
-    <h2></h2>
+    <h3>Thank you for your order.</h3>
         <div class="row small-up-shiping">
           <div class="columns"></div>
  <!--          <div class="columns"></div>--> 
