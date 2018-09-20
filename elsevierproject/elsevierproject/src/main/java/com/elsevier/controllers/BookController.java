@@ -56,12 +56,9 @@ public class BookController {
 			@ModelAttribute("cart_items") ArrayList<Book> cartItems) {
 
 		Book book = findBookById(books, bookId);
-
 		ModelAndView modelAndView = new ModelAndView("cart_updated",
 				"cart_items", cartItems);
-
 		cartItems.add(book);
-
 		modelAndView.addObject("books", books);
 		return modelAndView;
 
