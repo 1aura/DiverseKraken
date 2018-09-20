@@ -1,4 +1,4 @@
-package com.qa;
+package com.elsevier;
 
 import static org.assertj.core.api.Assertions.assertThat;
 

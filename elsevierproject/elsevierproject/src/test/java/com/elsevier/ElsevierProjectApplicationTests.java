@@ -1,4 +1,4 @@
-package com.qa;
+package com.elsevier;
 
 import java.util.HashMap;
 import java.util.Map;
