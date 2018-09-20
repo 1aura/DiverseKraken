@@ -62,13 +62,7 @@
 			<version>6.5.0</version>
 		</dependency>
 
-	<!-- https://mvnrepository.com/artifact/org.springframework/spring-test -->
-	<dependency>
-		<groupId>org.springframework</groupId>
-		<artifactId>spring-test</artifactId>
-		<version>3.2.1.RELEASE</version>
-		<scope>test</scope>
-	</dependency>
+	
 		
 	
 	</dependencies>
