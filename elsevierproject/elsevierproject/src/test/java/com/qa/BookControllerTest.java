@@ -20,7 +20,6 @@ public class BookControllerTest {
 
 	@Test
 	public void testIntitalCartIsEmpty() {
-
 		books = new ArrayList<Book>();
 		bookId = 1;
 		cartItems = new ArrayList<Book>();
