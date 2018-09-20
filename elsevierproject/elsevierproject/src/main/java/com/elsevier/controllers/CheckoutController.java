@@ -21,6 +21,18 @@ import com.stripe.model.Charge;
 @Controller
 public class CheckoutController {
 
+	@RequestMapping("/checkoutPAY")
+	public ModelAndView checkoutPAY(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") String orderTotal) throws StripeException
+	{
+		System.out.println("First name "+shipping.getFirstName());
+		ModelAndView modelAndView = new ModelAndView("checkout","order_total", orderTotal);
+		modelAndView.addObject("shipping_address", shipping);
+		modelAndView.addObject("order_total", orderTotal);
+		modelAndView.addObject("book_counts", bookCounts);
+	    return modelAndView;
+	}
+	
+	
 	@RequestMapping("/checkoutProcess")
 	public ModelAndView checkoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") String orderTotal) throws StripeException
 	{
@@ -31,6 +43,18 @@ public class CheckoutController {
 		modelAndView.addObject("shipping_address", shipping);
 		modelAndView.addObject("order_total", orderTotal);
 		modelAndView.addObject("book_counts", bookCounts);
+	    return modelAndView;
+	}
+	
+	@RequestMapping("/newcheckoutProcess")
+	public ModelAndView newcheckoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") String orderTotal)
+	{
+		ModelAndView modelAndView = new ModelAndView("newcheckout","order_total", orderTotal);
+		System.err.println("going to this page :(");
+		modelAndView.addObject("shipping_address", shipping);
+		modelAndView.addObject("order_total", orderTotal);
+		modelAndView.addObject("book_counts", bookCounts);
+
 	    return modelAndView;
 	}
 	

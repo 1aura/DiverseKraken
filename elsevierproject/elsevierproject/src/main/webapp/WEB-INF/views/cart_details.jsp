@@ -201,7 +201,7 @@
       
         </div>
 
-		<form action="/checkout" method="post" id="checkout_form">   
+		<form action="/newcheckoutProcess" method="post" id="checkout_form">   
 		<input type="hidden" name="order_total" value="<%=cartTotal %>"/>   
         <input type="submit" class="button large expanded" value="Proceed to Checkout"/>
         </form> 

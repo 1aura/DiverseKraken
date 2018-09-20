@@ -154,7 +154,8 @@
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
         <input type="submit" class="button large expanded" value="Continue Shopping"/>
 
-      </div>  
+      </div> 
+      </div> 
       
       <!-- Footer -->
   <div class="footer">

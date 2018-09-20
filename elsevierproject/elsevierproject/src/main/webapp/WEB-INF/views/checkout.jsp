@@ -14,13 +14,21 @@
     
   </head>
   <body>
+  
     
-    <form action="/checkoutProcess" method="post">
-    
+    <form id="myForm" name="myForm" action="/checkoutProcess" onSubmit="return checking()" method="post">
      <%
      
-    double orderTotal = (Double) request.getAttribute("order_total");
      System.err.println(request.getAttribute("order_total"));
+     //There was a comma being stored for this value when going
+     //from the checkout page to the payment processed page.
+     //E.g. order_total = ,2.99 not 2.99
+     //So it was passed to this as a string from 
+     //public ModelAndView checkoutProcess
+     //and stripped here - Monica
+     String orderTotalString = (String) request.getAttribute("order_total");
+     orderTotalString = orderTotalString.substring(1);
+     double orderTotal = Double.parseDouble(orderTotalString);
      %>
     
    
@@ -82,110 +90,45 @@
  
       <div class="medium-6 columns">
       
-       <h2> Shipping Details </h2>
+       <h2>  </h2>
+       <p>  </p>
         
         <div class="row small-up-shiping">
         
-          <div class="columns">
-            <label> First name * </label>
-            <input type="text" name="firstName" id="firstName" size="30"/> 
-          </div>
-          <div class="columns">
-             <label> Last name * </label>
-            <input type="text" name="lastName" id="lastName" size="30"/>
-          </div>
-          
-          <div class="column">
-           <label> Address 1 * </label>
-            <input type="text" name="addressLine1" id="addressLine1" size="30"/>
-          </div>
-          <div class="column">
-            <label> Address 2 * </label>
-            <input type="text" name="addressLine2" id="addressLine2" size="30"/>
-          </div>
-          <div class="column">
-            <label> City * </label>
-            <input type="text" name="city" id="city" size="30"/>
-          </div>
-          
-          <div class="column">
-            <label> Postcode / Zip code * </label>
-            <input type="text" name="postcode" id="postcode" size="30"/>
-          </div>
-          
-          <div class="column">
-            <label> State/Province * </label>
-            <input type="text" name="state" id="state" size="30"/>
-          </div>
-          
-          <div class="column">
-            <label> Country</label>
-            <input type="text" name="country" id="country" size="30"/>
-          </div>
-          
-           <div class="column">
-            <label> Phone Number</label>
-            <input type="text" name="phone" id="phone" size="30"/>
-          </div>
-          
-          
-           <div class="column">
-            <label> Email * </label>
-            <input type="text" name="email" id="email" size="30"/>
-          </div>
-          
-          
-          <div class="column">
-            <input type="checkbox" name="same" id="same"/> My billing and shipping address are the same
-          </div>
-          
-          
-         
-		  
-		
-		  
-		  
-		  
-		  
-          
-        </div>
+              
+
+
         
-        <div class="row small-up-4">
+       
           
-          <div class="column">
+               
            
-          </div>
-        
-        </div>
-        
-        <hr>
-      
-      </div>
-      <div class="medium-6 large-5 columns">
-      
-      
-        <div class="login_in_shipping">
+            <br>
+            
+           
+            </br>
+      	
+      		
+              
+    
+              
+         
     
       
-           <h3>Checkout using account </h3>
-        <p> Please login using saved details</p>
-
-        <div class="row">
-        
-          <div class="column">
-          
-               Email *
-             <input type="text" id="email" name="email" size="30"/> 
-             
-             Password *
-             <input type="password" id="password" name="password" size="30"/>  
-             <a href="/loginThroughCheckout?order_total=<%=orderTotal%>" class="button large expanded">Login</a>
-          </div>
-           
-       </div>
-
-      </div>
       
+      </div>
+           <div class="row small-up-4">
+          
+          <div class="column">
+           
+          </div>
+        
+        </div>
+      
+      </div>
+    
+      <div class="medium-6 large-5 columns">
+          
       <br>
       
         <h3>Order Summary </h3>
@@ -232,7 +175,7 @@
 		<input type="hidden" name="order_total" value="<%=orderTotal %>"/>   
         
         
-              
+            
     <script   src="https://checkout.stripe.com/checkout.js" class="stripe-button"
 		    data-key="pk_test_eFI25UMD5O7O9cJln9RlbDO5"
 		    data-amount="<%=(orderTotal + 2.50 )* 100%>"
@@ -247,17 +190,25 @@
         // have more than 1 button of that class
         document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
     </script>
+    
+  
+		
 
-        <input type="submit" class="button large expanded" value="Checkout"/>
+  		<input type="submit" class="button large expanded" value="Checkout"/>   
       </div>  
       
+    
       
-      </div>
+ 
+
+    
+           
+           
+                
+                
+       
       
-      
-      
-      
-     
+     </div>
    
       <!--<!-- Footer -->
   <div class="footer">
