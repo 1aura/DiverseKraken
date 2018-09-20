@@ -7,7 +7,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>All books | Diverse Books</title>
+<title>Search Books | Diverse Books</title>
 <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -27,7 +27,7 @@
 				<li><a href="/">Home</a></li>
 				<li><a href="/bestSellers">Bestsellers</a></li>
 				<li><a href="/newBooksIn">New In</a></li>
-				<li><a href="/allBookDetails">All Books</a></li>
+				<li><a href="/allBookDetails">Search Books</a></li>
 			</ul>
 
 
@@ -57,7 +57,7 @@
 
 	<div class="row column text-center">
 
-		<h2>Browse all books in stock here</h2>
+		<h2>Browse Search Books in stock here</h2>
 
 		<form action="">
 			<input type="radio" name="searchby" value="price"

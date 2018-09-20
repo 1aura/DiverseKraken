@@ -39,7 +39,7 @@
           <li><a href="/" >Home</a></li>
           <li><a href="/bestSellers">Bestsellers</a></li>
           <li><a href="/newBooksIn">New In</a></li>
-          <li><a href="/allBookDetails">All Books</a></li>
+          <li><a href="/allBookDetails">Search Books</a></li>
       </ul>
    
     
