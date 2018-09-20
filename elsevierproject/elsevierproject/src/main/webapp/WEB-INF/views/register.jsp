@@ -80,7 +80,7 @@ if (b == "") {
                <label>Last Name * </label>
                <input type="text" placeholder="Enter Last Name" name="lastname" id="lastName"/> 
                <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email"/> 
+                <input type="text" placeholder="Enter email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Invalid email"/> 
                 <label id="error_email" style="color: red;"></label>
                 <label>Password * </label>
 				 <input type="password" placeholder="Enter Password" name="password" id="password" pattern=".{6,}" title="6 or more characters"/>
