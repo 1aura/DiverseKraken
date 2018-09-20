@@ -19,21 +19,7 @@ public class ElsevierProjectApplicationTests {
 	@Test
 	public void contextLoads() {
 		
-//		Stripe.apiKey = "sk_test_MITXcHjPotG7ZJhmEr4NxGxa";
-//
-//		Map<String, Object> params = new HashMap<String, Object>();
-//		params.put("amount", 999);
-//		params.put("currency", "usd");
-//		params.put("source", "tok_visa");
-//		params.put("receipt_email", "jenny.rosen@example.com");
-//		try {
-//			Charge charge = Charge.create(params);
-//			System.err.println("Stripe threw but it WORKED ");
-//		} catch (StripeException e) {
-//			// TODO Auto-generated catch block
-//			e.printStackTrace();
-//			System.err.println("Stripe CAUGHT an exception");
-//		}
+
 	}
 
 }
