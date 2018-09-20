@@ -22,10 +22,11 @@ import com.stripe.model.Charge;
 public class CheckoutController {
 
 	@RequestMapping("/checkoutProcess")
-	public ModelAndView checkoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") double orderTotal) throws StripeException
+	public ModelAndView checkoutProcess(@ModelAttribute("Shipping") Shipping shipping,@ModelAttribute("book_counts") Map<Integer,Integer> bookCounts,@RequestParam("order_total") String orderTotal) throws StripeException
 	{
+		System.err.println("Payment has been processed");
+		
 		System.out.println("First name "+shipping.getFirstName());
-		System.err.println("I am working PLEASE :'(");
 		ModelAndView modelAndView = new ModelAndView("payment_form","order_total", orderTotal);
 		modelAndView.addObject("shipping_address", shipping);
 		modelAndView.addObject("order_total", orderTotal);
