@@ -1,7 +1,5 @@
 package com.elsevier.models;
 
-
-
 import java.util.List;
 
 import javax.persistence.ElementCollection;
@@ -12,22 +10,22 @@ import org.springframework.beans.factory.annotation.Autowired;
 
 @Entity
 public class Book {
-	
+
 	@Id
 	private int bookId;
-	
+
 	private String title;
-	
+
 	private String description;
-	
+
 	private String publisher;
-	
+
 	private String format;
-	
+
 	private String publishedDate;
-	
+
 	private int pageCount;
-	
+
 	public List<Author> getAuthors() {
 		return authors;
 	}
@@ -35,23 +33,24 @@ public class Book {
 	@Autowired
 	@ElementCollection
 	private List<Author> authors;
-	
+
 	public void setAuthors(List<Author> authors) {
 		this.authors = authors;
 	}
 
 	private double price;
-	
-	private String paperISBN;
-	
-	private String eBookISBN;
-	
-	private String tableOfContents;
-	
-	
-	private String bookImage;
-	
 
+	private String paperISBN;
+
+	private String eBookISBN;
+
+	private String tableOfContents;
+
+	private String bookImage;
+
+	private String genre;
+	
+	
 
 	public int getBookId() {
 		return bookId;
@@ -109,8 +108,6 @@ public class Book {
 		this.pageCount = pageCount;
 	}
 
-
-
 	public double getPrice() {
 		return price;
 	}
@@ -151,6 +148,12 @@ public class Book {
 		this.bookImage = bookImage;
 	}
 	
-	
-	
+	public String getGenre() {
+		return genre;
+	}
+
+	public void setGenre(String Genre) {
+		this.genre = Genre;
+	}
+
 }

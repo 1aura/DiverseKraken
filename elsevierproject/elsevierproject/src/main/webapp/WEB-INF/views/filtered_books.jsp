@@ -57,34 +57,7 @@
 
 	<div class="row column text-center">
 
-		<h2>Browse all books in stock here</h2>
-
-		<form action="">
-			<input type="radio" name="searchby" value="price"
-				onclick="createPriceBar();"> Price <input type="radio"
-				name="searchby" value="pages" onclick="createPageBar();">
-			Pages
-		</form>
-		<p id="searchBySelected"></p>
-		<script>
-			function createPriceBar() {
-				document.getElementById("searchBySelected").innerHTML = "<p>Prices less than"
-						+ "<input type=\"range\" min=\"1\" max=\"30\" value=\"10\" onchange=\"updateTextInput(this.value);\">"
-						+ "<input type=\"text\" id=\"slidebar\" value=\"10\">"
-						+ "</p>";
-			}
-
-			function createPageBar() {
-				document.getElementById("searchBySelected").innerHTML = "<p>Pages less than"
-						+ "<input type=\"range\" min=\"100\" max=\"550\" value=\"300\"onchange=\"updateTextInput(this.value);\">"
-						+ "<input type=\"text\" id=\"slidebar\" value=\"200\">"
-						+ "</p>";
-			}
-
-			function updateTextInput(val) {
-				document.getElementById("slidebar").value = val;
-			}
-		</script>
+		<h2>All the filtered books</h2>
 
 
 		<%
@@ -95,22 +68,41 @@
 
 
 	</div>
-	<script>
-		function filterPrice() {
-			var slideBarValue = document.getElementById("slidebar").value;
-			window.location.replace("http://localhost:8080/filteredBooks?filterValue=" + slideBarValue);
-		}
-		
-		function filterPage() {
-			var slideBarValue = document.getElementById("slidebar").value;
-			window.location.replace("http://localhost:8080/filteredBooks?filterValue=" + slideBarValue);
-		}
-		
-		
-	</script>
-	<input type="button" value="search by price" onclick="filterPrice();">
-	<input type="button" value="search by page" onclick="filterPage();">
 
+
+	<div class="row small-up-2 large-up-4">
+		<%
+			String filterValue = request.getParameter("filterValue");
+			int val = Integer.parseInt(filterValue);
+			for(Book book: books){
+				if(book.getPageCount() < val){
+		
+			
+		%>
+
+		<div class="column">
+
+			<a href="/bookDetails?bookId=<%=book.getBookId()%>"><img
+				class="thumbnail" src="<%=book.getBookImage()%>"></a>
+			<h5><%=book.getTitle()%></h5>
+			<p>
+				£<%=book.getPrice()%></p>
+			<p><%=book.getPageCount()%> pages</p>
+
+			<a href="/bookDetails?bookId=<%=book.getBookId()%>"
+				class="button expanded">View book details</a> <a
+				href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
+		</div>
+
+		<%
+				}
+			}
+		
+		%>
+	</div>
+
+
+	<hr>
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="js/elsevier.js"></script>
