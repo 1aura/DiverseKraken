@@ -72,12 +72,12 @@
 
 	<div class="row small-up-2 large-up-4">
 		<%
-			String filterValue = request.getParameter("filterValue");
-			int val = Integer.parseInt(filterValue);
-			for(Book book: books){
-				if(book.getPageCount() < val){
-		
-			
+			String pages = request.getParameter("pages");
+			String price = request.getParameter("price");
+			int val = Integer.parseInt(pages);
+			if(val != 0){
+				for(Book book: books){
+					if(book.getPageCount() < val){
 		%>
 
 		<div class="column">
@@ -87,7 +87,9 @@
 			<h5><%=book.getTitle()%></h5>
 			<p>
 				£<%=book.getPrice()%></p>
-			<p><%=book.getPageCount()%> pages</p>
+			<p><%=book.getPageCount()%>
+				pages
+			</p>
 
 			<a href="/bookDetails?bookId=<%=book.getBookId()%>"
 				class="button expanded">View book details</a> <a
@@ -95,6 +97,37 @@
 		</div>
 
 		<%
+					}
+				}
+			}else{
+				double priceVal = Double.parseDouble(price);
+				for(Book book: books){
+					if(book.getPrice() < priceVal){
+			
+		%>
+		
+		
+		<div class="column">
+
+			<a href="/bookDetails?bookId=<%=book.getBookId()%>"><img
+				class="thumbnail" src="<%=book.getBookImage()%>"></a>
+			<h5><%=book.getTitle()%></h5>
+			<p>
+				£<%=book.getPrice()%></p>
+			<p><%=book.getPageCount()%>
+				pages
+			</p>
+
+			<a href="/bookDetails?bookId=<%=book.getBookId()%>"
+				class="button expanded">View book details</a> <a
+				href="/addToCart?bookId=" class="button expanded">Add to Cart</a>
+		</div>
+		
+		
+		
+		
+		<%
+					}
 				}
 			}
 		

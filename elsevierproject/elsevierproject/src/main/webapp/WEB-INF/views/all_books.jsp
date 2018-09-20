@@ -98,12 +98,12 @@
 	<script>
 		function filterPrice() {
 			var slideBarValue = document.getElementById("slidebar").value;
-			window.location.replace("http://localhost:8080/filteredBooks?filterValue=" + slideBarValue);
+			window.location.replace("http://localhost:8080/filteredBooks?pages=0&price=" + slideBarValue);
 		}
 		
 		function filterPage() {
 			var slideBarValue = document.getElementById("slidebar").value;
-			window.location.replace("http://localhost:8080/filteredBooks?filterValue=" + slideBarValue);
+			window.location.replace("http://localhost:8080/filteredBooks?pages=" + slideBarValue+"&price=0.0");
 		}
 		
 		

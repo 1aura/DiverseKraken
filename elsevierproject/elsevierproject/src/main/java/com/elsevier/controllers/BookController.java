@@ -128,7 +128,7 @@ public class BookController {
 	}
 	
 	@RequestMapping("/filteredBooks")
-	public ModelAndView filteredBooks(@ModelAttribute("books") Iterable<Book> books,@RequestParam("filterValue") int filterValue) {
+	public ModelAndView filteredBooks(@ModelAttribute("books") Iterable<Book> books,@RequestParam("pages") int pages,@RequestParam("price") double price) {
 	    ModelAndView modelAndView = new ModelAndView("filtered_books");
 	    return modelAndView;
 	}
