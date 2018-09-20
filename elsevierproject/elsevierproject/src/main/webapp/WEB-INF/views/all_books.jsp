@@ -54,7 +54,7 @@
 	<!-- End Top Bar -->
 
 
-
+	<hr>
 	<div class="row column text-center">
 
 		<h2>Browse Search Books in stock here</h2>
@@ -95,6 +95,7 @@
 
 
 	</div>
+	<div class="row column text-center">
 	<script>
 		function filterPrice() {
 			var slideBarValue = document.getElementById("slidebar").value;
@@ -110,7 +111,8 @@
 	</script>
 	<input type="button" value="search by price" onclick="filterPrice();">
 	<input type="button" value="search by page" onclick="filterPage();">
-
+	</div>
+	<hr>
 
 	<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 	<script src="js/elsevier.js"></script>
