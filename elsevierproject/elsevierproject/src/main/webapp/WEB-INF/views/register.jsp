@@ -80,7 +80,7 @@ if (b == "") {
                <label>Last Name * </label>
                <input type="text" placeholder="Enter Last Name" name="lastname" id="lastName"/> 
                <label>Email ID * </label>
-                <input type="text" placeholder="Enter email" name="email" id="email"/> 
+                <input type="text" placeholder="Enter email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="Invalid email"/> 
                 <label id="error_email" style="color: red;"></label>
                 <label>Password * </label>
 				 <input type="password" placeholder="Enter Password" name="password" id="password" pattern=".{6,}" title="6 or more characters"/>
@@ -89,12 +89,12 @@ if (b == "") {
             
             <div class="medium-6">
            
-          	 <input type="checkbox" name="aggreement"/> I have read and understood the Registered User Agreement
+          	 <input type="checkbox" name="checkbox" value="check"/> I have read and understood the Registered User Agreement
           	 <!-- <a href="/registered_user_agreement" color="black">Registered User Agreement </a> --> and agree to be bound by all of its terms. 
-         
+         	
             </div>
       		
-      		<input type="submit" class="button create account" value="Create Account">
+      		<input type="submit" class="button create account" value="Create Account" onclick="if(!this.form.checkbox.checked){alert('You must agree to the terms first.');return false}">
               
               </form>
     

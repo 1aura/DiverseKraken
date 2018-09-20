@@ -1,8 +1,6 @@
 package com.elsevier.controllers;
 
-import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.model;
-
-import java.util.HashMap;
+import org.springframework.test.web.servlet.result.MockMvcResultHandlers;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;

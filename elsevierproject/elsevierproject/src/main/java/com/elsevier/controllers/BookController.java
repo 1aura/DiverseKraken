@@ -16,279 +16,247 @@ import com.elsevier.models.Book;
 import com.elsevier.repositories.BookRepository;
 
 @Controller
-@SessionAttributes(names={"books","cart_items","book_counts","filtered_books"})
+@SessionAttributes(names = { "books", "cart_items", "book_counts",
+		"filtered_books" })
 public class BookController {
 
 	@Autowired
 	BookRepository bookService;
-	
+
 	@RequestMapping("/bookDetails")
-	public ModelAndView bookDetails(@ModelAttribute("books") Iterable<Book> books,@RequestParam("bookId") int bookId)
-	{
+	public ModelAndView bookDetails(
+			@ModelAttribute("books") Iterable<Book> books,
+			@RequestParam("bookId") int bookId) {
 		Book book = findBookById(books, bookId);
-		
-		ModelAndView modelAndView = new ModelAndView("book_details","book",book);
+
+		ModelAndView modelAndView = new ModelAndView("book_details", "book",
+				book);
 		modelAndView.addObject("books", books);
 		return modelAndView;
-		
+
 	}
-	
+
 	@RequestMapping("/searchBooks")
-	public ModelAndView bookDetails(@ModelAttribute("books") Iterable<Book> books,@RequestParam("title") String title)
-	{
+	public ModelAndView bookDetails(
+			@ModelAttribute("books") Iterable<Book> books,
+			@RequestParam("title") String title) {
 		Book book = findBookByTitle(books, title);
-		
-		ModelAndView modelAndView = new ModelAndView("book_details","book",book);
+
+		ModelAndView modelAndView = new ModelAndView("book_details", "book",
+				book);
 		modelAndView.addObject("books", books);
 		return modelAndView;
-		
+
 	}
-	
-	
+
 	@RequestMapping("/addToCart")
-	public ModelAndView addToCart(@ModelAttribute("books") Iterable<Book> books,
+	public ModelAndView addToCart(
+			@ModelAttribute("books") Iterable<Book> books,
 			@RequestParam("bookId") int bookId,
-			@ModelAttribute("cart_items") ArrayList<Book> cartItems)
-	{
-		
+			@ModelAttribute("cart_items") ArrayList<Book> cartItems) {
+
 		Book book = findBookById(books, bookId);
-	
-		ModelAndView modelAndView = new ModelAndView("cart_updated","cart_items",cartItems);
-		
-		
+		ModelAndView modelAndView = new ModelAndView("cart_updated",
+				"cart_items", cartItems);
 		cartItems.add(book);
-		
 		modelAndView.addObject("books", books);
 		return modelAndView;
-		
+
 	}
-	
+
 	@RequestMapping("/viewCart")
-	public ModelAndView viewCart(@ModelAttribute("books") Iterable<Book> books,@ModelAttribute("cart_items") ArrayList<Book> cartItems)
-	{
-		
+	public ModelAndView viewCart(@ModelAttribute("books") Iterable<Book> books,
+			@ModelAttribute("cart_items") ArrayList<Book> cartItems) {
+
 		ModelAndView modelAndView = null;
-		
+
 		ArrayList<Integer> bookIds = loadBookIds(cartItems);
-		
-		Map<Integer,Integer> bookCounts = bookCounts(bookIds);
-		
+
+		Map<Integer, Integer> bookCounts = bookCounts(bookIds);
+
 		ArrayList<Book> filteredBooks = filteredBookList(books, bookCounts);
-		
-		
-		
-		if(cartItems.size()!=0)
-		{
-		
-			modelAndView = new ModelAndView("cart_details","cart_items",cartItems);
+
+		if (cartItems.size() != 0) {
+
+			modelAndView = new ModelAndView("cart_details", "cart_items",
+					cartItems);
 			modelAndView.addObject("book_counts", bookCounts);
 			modelAndView.addObject("filtered_books", filteredBooks);
-			
-		}
-		else
-		{
-			modelAndView = new ModelAndView("cart_empty","cart_items",cartItems);
+
+		} else {
+			modelAndView = new ModelAndView("cart_empty", "cart_items",
+					cartItems);
 			modelAndView.addObject("book_counts", bookCounts);
 			modelAndView.addObject("filtered_books", filteredBooks);
 		}
-		
+
 		return modelAndView;
-		
+
 	}
 
-	
 	@RequestMapping("/removeFromCart")
-	public ModelAndView removeFromCart(@ModelAttribute("filtered_books") ArrayList<Book> cartItems,
-			@RequestParam("bookId") int bookId)
-	{
-		
+	public ModelAndView removeFromCart(
+			@ModelAttribute("filtered_books") ArrayList<Book> cartItems,
+			@RequestParam("bookId") int bookId) {
+
 		cartItems = removeBookById(cartItems, bookId);
-		
+
 		ModelAndView modelAndView = null;
-		
-		if(cartItems.size()!=0)
-		{
-		
-			modelAndView = new ModelAndView("cart_details","cart_items",cartItems);
-	    }
-		else
-		{
-			modelAndView = new ModelAndView("cart_empty","cart_items",cartItems);
+
+		if (cartItems.size() != 0) {
+
+			modelAndView = new ModelAndView("cart_details", "cart_items",
+					cartItems);
+		} else {
+			modelAndView = new ModelAndView("cart_empty", "cart_items",
+					cartItems);
 		}
-		
+
 		return modelAndView;
-		
+
 	}
 
-	
 	@RequestMapping("/allBookDetails")
 	public ModelAndView allBookDetails() {
-	    ModelAndView modelAndView = new ModelAndView("all_books");
-	    return modelAndView;
+		ModelAndView modelAndView = new ModelAndView("all_books");
+		return modelAndView;
 	}
-	
+
 	@RequestMapping("/filteredBooks")
-	public ModelAndView filteredBooks(@ModelAttribute("books") Iterable<Book> books,@RequestParam("pages") int pages,@RequestParam("price") double price) {
-	    ModelAndView modelAndView = new ModelAndView("filtered_books");
-	    return modelAndView;
+	public ModelAndView filteredBooks(
+			@ModelAttribute("books") Iterable<Book> books,
+			@RequestParam("pages") int pages,
+			@RequestParam("price") double price) {
+		ModelAndView modelAndView = new ModelAndView("filtered_books");
+		return modelAndView;
 	}
-	
+
 	@RequestMapping("/newBooksIn")
 	public ModelAndView newBooksIn() {
-	    ModelAndView modelAndView = new ModelAndView("new_books_in");
-	    return modelAndView;
+		ModelAndView modelAndView = new ModelAndView("new_books_in");
+		return modelAndView;
 	}
-	
+
 	@RequestMapping("/bestSellers")
 	public ModelAndView bestSellers() {
-	    ModelAndView modelAndView = new ModelAndView("bestsellers");
-	    return modelAndView;
+		ModelAndView modelAndView = new ModelAndView("bestsellers");
+		return modelAndView;
 	}
-	
 
-	
-	public ArrayList<Integer> loadBookIds(ArrayList<Book> cartItems)
-	{
-		
-         ArrayList<Integer> bookIds = new ArrayList<>();
-		
-		for(Book book : cartItems)
-		{
+	public ArrayList<Integer> loadBookIds(ArrayList<Book> cartItems) {
+
+		ArrayList<Integer> bookIds = new ArrayList<>();
+
+		for (Book book : cartItems) {
 			bookIds.add(book.getBookId());
 		}
-		
+
 		return bookIds;
-		
+
 	}
-	
 
 	// Some business methods
-	
-	public Book findBookById(Iterable<Book> books,int bookId)
-	{
-		
-        Book book = null;
-		
-		for(Book b : books)
-		{
-			if(b.getBookId()==bookId)
-			{
+
+	public Book findBookById(Iterable<Book> books, int bookId) {
+
+		Book book = null;
+
+		for (Book b : books) {
+			if (b.getBookId() == bookId) {
 				book = b;
 			}
 		}
 		return book;
 
 	}
-	
-	public Book findBookByTitle(Iterable<Book> books,String title)
-	{
-		
-        Book book = null;
-		
-		for(Book b : books)
-		{
-			if(b.getTitle().toLowerCase().contains(title.toLowerCase()))
-			{
+
+	public Book findBookByTitle(Iterable<Book> books, String title) {
+
+		Book book = null;
+
+		for (Book b : books) {
+			if (b.getTitle().toLowerCase().contains(title.toLowerCase())) {
 				book = b;
 			}
 		}
 		return book;
 
 	}
-	
-	public ArrayList<Book> loadBooksIntoCart(Iterable<Book> books,ArrayList<Integer> bookIds)
-	{
-		
+
+	public ArrayList<Book> loadBooksIntoCart(Iterable<Book> books,
+			ArrayList<Integer> bookIds) {
+
 		ArrayList<Book> bookList = new ArrayList<>();
-		
-		for(Book book : books)
-		{
-			for(int bookId : bookIds)
-			if(bookId==book.getBookId())
-				bookList.add(book);
+
+		for (Book book : books) {
+			for (int bookId : bookIds)
+				if (bookId == book.getBookId())
+					bookList.add(book);
 		}
-		
+
 		return bookList;
 	}
-	
-	
-	
-	
-	
-	
-//	public boolean findBookInCart(ArrayList<Integer> cartItems,int bookId)
-//	{
-//		
-//		
-//		Set<Book> books = cartItems.keySet();		
-//		
-//		for(Book b : books)
-//		{
-//			if(b.getBookId()==bookId)
-//			{
-//				bookFound = true;
-//			}
-//		}
-//		
-//		return cartItems.contains(bookId);
-//		
-//		
-//		
-//	}
-	
-	
-	
-	
-	
-	public  ArrayList<Book> removeBookById(ArrayList<Book> books,int bookId)
-	{
-	   
-		books.removeIf(b-> b.getBookId()==bookId);
-		
-		return books;
-		
-	}
-	
-	
-	public Map<Integer,Integer> bookCounts(ArrayList<Integer> bookIds)
-	{
-		
-		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
-		
+	// public boolean findBookInCart(ArrayList<Integer> cartItems,int bookId)
+	// {
+	//
+	//
+	// Set<Book> books = cartItems.keySet();
+	//
+	// for(Book b : books)
+	// {
+	// if(b.getBookId()==bookId)
+	// {
+	// bookFound = true;
+	// }
+	// }
+	//
+	// return cartItems.contains(bookId);
+	//
+	//
+	//
+	// }
+
+	public ArrayList<Book> removeBookById(ArrayList<Book> books, int bookId) {
+
+		books.removeIf(b -> b.getBookId() == bookId);
+
+		return books;
+
+	}
+
+	public Map<Integer, Integer> bookCounts(ArrayList<Integer> bookIds) {
+
+		Map<Integer, Integer> map = new HashMap<Integer, Integer>();
 
 		for (int bookId : bookIds) {
 			Integer count = map.get(bookId);
 			map.put(bookId, (count == null) ? 1 : count + 1);
 		}
-		
+
 		for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
 			System.out.println("Key : " + entry.getKey() + " Value : "
-				+ entry.getValue());
+					+ entry.getValue());
 		}
 
-		
 		return map;
 	}
-	
-	public ArrayList<Book> filteredBookList(Iterable<Book> books,Map<Integer, Integer> map)
-	{
-        ArrayList<Book> filteredBooks = new ArrayList<>();
-		
-        
-        
-		for(Book book : books)
-		{
+
+	public ArrayList<Book> filteredBookList(Iterable<Book> books,
+			Map<Integer, Integer> map) {
+		ArrayList<Book> filteredBooks = new ArrayList<>();
+
+		for (Book book : books) {
 			for (Map.Entry<Integer, Integer> entry : map.entrySet()) {
-				Integer bookId =  entry.getKey(); // Get book ID
-				if(bookId==book.getBookId())
+				Integer bookId = entry.getKey(); // Get book ID
+				if (bookId == book.getBookId())
 					filteredBooks.add(book);
-	      		}
+			}
 		}
-	
-        System.out.println("Number of filtered items "+filteredBooks.size());
+
+		System.out.println("Number of filtered items " + filteredBooks.size());
 		return filteredBooks;
-	
+
 	}
-	
+
 }
